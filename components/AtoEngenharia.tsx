@@ -124,7 +124,7 @@ export default function AtoEngenharia() {
                   ))}
                 </ul>
               </div>
-              {p.nome === "LDCODE" ? (
+              {p.nome === "PLATAFORMA DE CONTROLE - LD CODE" || p.nome === "LDCODE" ? (
                 <CarrosselDemo imagens={demoLDCODE} rotulo="painel LDCODE" />
               ) : p.nome === "XOS" ? (
                 <CarrosselDemo imagens={demoXOS} rotulo="XOS" />
