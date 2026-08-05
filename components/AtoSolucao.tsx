@@ -41,7 +41,7 @@ export default function AtoSolucao() {
         </Reveal>
 
         <Reveal delay={280}>
-          <p className={s.naoPrecisaFinal}>Nós fazemos por você e sua empresa.</p>
+          <p className={s.naoPrecisaFinal}>Não importa o seu segmento. Nós cuidamos do digital.</p>
         </Reveal>
 
         <ol className={s.passos} style={{ listStyle: "none", padding: 0 }}>
