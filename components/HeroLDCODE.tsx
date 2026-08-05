@@ -74,7 +74,7 @@ const marcas = ["Restaurantes", "Lojas", "Salões", "Clínicas", "Serviços", "C
 
 const stats = [
   { valor: 120, sufixo: "+", label: "Negócios atendidos" },
-  { valor: 7, sufixo: " dias", label: "Para ficar no ar" },
+  { valor: 14, sufixo: " dias", label: "Para ficar no ar" },
   { valor: 98, sufixo: "%", label: "Recomendam a gente" },
   { valor: 100, sufixo: "%", label: "Entregas no prazo" },
 ];
