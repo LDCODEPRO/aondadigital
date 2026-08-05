@@ -15,7 +15,7 @@ const jargoes = [
  * Os cards são falas do próprio cliente — não acusações da agência.
  */
 const dores = [
-  { texto: "Meu site já ficou para trás.", imagem: "/brand/dor/retro-site.png", cor: "#3DB4FF", textoPrimeiro: true },
+  { texto: "Meu site já ficou para trás.", imagem: "/brand/dor/retro-site.png", cor: "#3DB4FF" },
   { texto: "Minha empresa é boa. Mas não parece.", imagem: "/brand/dor/google.svg", cor: "#4285F4", destaque: true },
   { texto: "Meu Instagram não transmite confiança.", imagem: "/brand/dor/instagram.svg", cor: "#C837AB", destaque: true },
   { texto: "As pessoas pesquisam minha empresa e não encontram uma presença profissional.", imagem: "/brand/dor/busca-vazia.svg", cor: "#00C2A8" },
@@ -42,6 +42,7 @@ export default function AtoDor() {
                 data-spotlight
                 style={{ ["--tom" as string]: dor.cor }}
               >
+                <p className={s.cardTitle}>{dor.texto}</p>
                 <img
                   src={dor.imagem}
                   alt=""
@@ -54,7 +55,6 @@ export default function AtoDor() {
                         : s.dorImgIcone
                   }
                 />
-                <p className={s.cardTitle}>{dor.texto}</p>
               </div>
             </Reveal>
           ))}
