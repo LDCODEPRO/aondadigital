@@ -63,7 +63,7 @@ const plataformas = [
     ativas: [0, 2],
   },
   {
-    nome: "XOS",
+    nome: "PLATAFORMA CONTROLE DE SAÚDE DOS AGENTES - XOS",
     frase: "O sistema operacional que conecta tudo.",
     itens: ["Monitoramento contínuo", "Infraestrutura", "Métricas e alertas", "Estabilidade"],
     ativas: [1, 3],
@@ -126,7 +126,7 @@ export default function AtoEngenharia() {
               </div>
               {p.nome === "PLATAFORMA DE CONTROLE - LD CODE" || p.nome === "LDCODE" ? (
                 <CarrosselDemo imagens={demoLDCODE} rotulo="painel LDCODE" />
-              ) : p.nome === "XOS" ? (
+              ) : p.nome.includes("XOS") ? (
                 <CarrosselDemo imagens={demoXOS} rotulo="XOS" />
               ) : p.nome === "COMPLEXO-X" ? (
                 <CarrosselDemo imagens={demoCX} rotulo="Complexo-X" />
