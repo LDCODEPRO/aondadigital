@@ -38,7 +38,7 @@ export default function AtoDor() {
           {dores.map((dor, i) => (
             <Reveal key={dor.texto} delay={i * 80}>
               <div
-                className={`${s.card} ${s.dorCard} ${dor.textoPrimeiro ? s.dorCardInverso : ""}`}
+                className={`${s.card} ${s.dorCard}`}
                 data-spotlight
                 style={{ ["--tom" as string]: dor.cor }}
               >
