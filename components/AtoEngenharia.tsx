@@ -69,7 +69,7 @@ const plataformas = [
     ativas: [1, 3],
   },
   {
-    nome: "COMPLEXO-X",
+    nome: "PLATAFORMA RESPONSÁVEL DOS PROJETOS MÃE E MARCAS - COMPLEXO-X",
     frase: "Onde a inteligência trabalha.",
     itens: ["Inteligência artificial própria", "Agentes especializados", "Fluxos e automações", "Aprendizado contínuo"],
     ativas: [0, 1, 3],
@@ -128,7 +128,7 @@ export default function AtoEngenharia() {
                 <CarrosselDemo imagens={demoLDCODE} rotulo="painel LDCODE" />
               ) : p.nome.includes("XOS") ? (
                 <CarrosselDemo imagens={demoXOS} rotulo="XOS" />
-              ) : p.nome === "COMPLEXO-X" ? (
+              ) : p.nome.includes("COMPLEXO-X") ? (
                 <CarrosselDemo imagens={demoCX} rotulo="Complexo-X" />
               ) : p.nome === "AGENTE-X" ? (
                 <CarrosselDemo imagens={demoAX} rotulo="Agente-X" />
