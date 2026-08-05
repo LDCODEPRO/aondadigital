@@ -97,12 +97,16 @@
   transform: translateY(0.35em);
   animation: letraEntra 0.55s var(--ease) forwards;
 }
+.tituloPrincipal {
+  color: #ffffff !important;
+}
+
 .tituloPrincipal .letra {
-  background: none;
-  -webkit-background-clip: initial;
-  background-clip: initial;
-  -webkit-text-fill-color: #ffffff;
-  color: #ffffff;
+  background: none !important;
+  -webkit-background-clip: unset !important;
+  background-clip: unset !important;
+  -webkit-text-fill-color: #ffffff !important;
+  color: #ffffff !important;
 }
 
 @keyframes letraEntra {
