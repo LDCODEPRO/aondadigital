@@ -65,7 +65,7 @@ function useTilt3D() {
 const slide = {
   badge: "Atendendo novos negócios em 2026",
   linha1: "O QUE FAZEMOS ?",
-  linha2: "Nós cuidamos do digital da sua empresa",
+  linha2: "Nós cuidamos do digital da sua Empresa.",
   lead: "Criamos o site, a loja online e as ferramentas que fazem o seu comércio aparecer, atrair clientes e vender mais. Você cuida do negócio — a gente cuida da parte digital.",
   prova: "+120 negócios já vendem online com a AONDA",
 };
