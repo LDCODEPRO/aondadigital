@@ -25,7 +25,7 @@
 .dotBadge { width: 8px; height: 8px; border-radius: 50%; background: #37e6a4; box-shadow: 0 0 10px #37e6a4; animation: pulseBadge 2s infinite; }
 @keyframes pulseBadge { 0%,100% { opacity: 1; } 50% { opacity: .35; } }
 
-.heroSlide h1 { font-size: clamp(40px, 6vw, 72px); line-height: 1.05; margin-bottom: 22px; color: var(--text-primary); }
+.heroSlide h1 { font-size: clamp(28px, 4.2vw, 50px); line-height: 1.05; margin-bottom: 22px; color: var(--text-primary); }
 .line { display: block; }
 .gradText {
   background: linear-gradient(115deg, #00A9DE 0%, #4D7CFF 55%, #7B5CFF 100%);
