@@ -57,8 +57,8 @@ const demoAX = [
  */
 const plataformas = [
   {
-    nome: "LDCODE",
-    frase: "Onde toda tecnologia nasce.",
+    nome: "PLATAFORMA DE CONTROLE",
+    frase: "LD CODE",
     itens: ["Engenharia de software", "Arquitetura de plataformas", "Sistemas sob medida", "Anos de desenvolvimento próprio"],
     ativas: [0, 2],
   },
