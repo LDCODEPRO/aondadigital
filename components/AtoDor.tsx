@@ -19,7 +19,7 @@ const dores = [
   { texto: "Minha empresa é boa. Mas não parece.", imagem: "/brand/dor/google.svg", cor: "#4285F4", destaque: true },
   { texto: "Meu Instagram não transmite confiança.", imagem: "/brand/dor/instagram.svg", cor: "#C837AB", destaque: true },
   { texto: "As pessoas pesquisam minha empresa e não encontram uma presença profissional.", imagem: "/brand/dor/busca-vazia.svg", cor: "#00C2A8" },
-  { texto: "Trabalho amador.", imagem: "/brand/dor/logo-mal-feito.svg", cor: "#FF8A3D", destaque: true },
+  { texto: "TRABALHO AMADOR.<br />LOGO HORRÍVEL.", imagem: "/brand/dor/logo-mal-feito.svg", cor: "#FF8A3D", destaque: true },
   { texto: "Sei que preciso resolver isso. Só não sei por onde começar.", imagem: "/brand/dor/interrogacao.svg", cor: "#00E5FF", destaque: true },
 ];
 
@@ -42,7 +42,7 @@ export default function AtoDor() {
                 data-spotlight
                 style={{ ["--tom" as string]: dor.cor }}
               >
-                <p className={s.cardTitle}>{dor.texto}</p>
+                <p className={s.cardTitle} dangerouslySetInnerHTML={{ __html: dor.texto }} />
                 <img
                   src={dor.imagem}
                   alt=""
