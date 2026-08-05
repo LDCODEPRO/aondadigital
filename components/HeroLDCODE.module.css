@@ -99,7 +99,7 @@
 }
 .codeChip .up { color: #37e6a4; font-weight: 700; }
 .codeChip.tl { top: -130px; left: -26px; animation: float1 6s ease-in-out infinite; }
-.codeChip.br { bottom: -130px; right: -22px; animation: float2 7s ease-in-out infinite; }
+.codeChip.br { bottom: -130px; right: 40px; transform: scale(1.3); animation: float2 7s ease-in-out infinite; }
 @keyframes float1 { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }
 @keyframes float2 { 0%,100% { transform: translateY(0); } 50% { transform: translateY(10px); } }
 
