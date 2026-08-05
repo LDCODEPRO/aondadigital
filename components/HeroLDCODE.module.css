@@ -80,10 +80,10 @@
 .bannerVisual { justify-self: center; width: 100%; max-width: 900px; }
 @media (max-width: 900px) { .bannerVisual { order: -1; max-width: 300px; } }
 .heroLogoStage {
-  position: relative; border-radius: 24px; border: 1px solid var(--border);
-  background: radial-gradient(ellipse at 50% 35%, rgba(43,127,255,.18), transparent 70%), linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.01));
-  padding: 38px; overflow: visible;
-  box-shadow: 0 30px 80px -30px rgba(43,127,255,.5);
+  position: relative; border-radius: 0; border: none;
+  background: transparent;
+  padding: 0; overflow: visible;
+  box-shadow: none;
   transform: translateY(-30%) perspective(900px) rotateY(var(--tiltY, 0deg)) rotateX(var(--tiltX, 0deg));
   transition: transform .25s ease-out;
   transform-style: preserve-3d;
