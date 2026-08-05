@@ -123,12 +123,21 @@
 :global(html[data-theme="light"]) .marcaDark { display: none; }
 :global(html[data-theme="light"]) .marcaLight { display: block; }
 
-.trust { border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); background: var(--surface); }
-.trustWrap { display: flex; align-items: center; gap: 40px; flex-wrap: wrap; justify-content: space-between; padding-block: 30px; max-width: 1200px; margin: 0 auto; padding-inline: 24px; }
-.trustLabel { font-family: monospace; font-size: 12px; letter-spacing: .16em; text-transform: uppercase; color: var(--text-secondary); }
-.marks { display: flex; gap: 34px; flex-wrap: wrap; align-items: center; }
-.markLink { font-weight: 700; font-size: 18px; color: var(--text-secondary); opacity: .6; letter-spacing: .02em; text-decoration: none; transition: color .2s, transform .2s, opacity .2s; }
-.markLink:hover { color: #1fd0e8; opacity: 1; transform: translateY(-1px); }
+.trust { border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); background: var(--surface); padding-block: 24px; overflow: hidden; }
+.trustWrap { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 16px; width: 100%; max-width: 1200px; margin: 0 auto; padding-inline: 24px; }
+.trustLabel { font-family: monospace; font-size: 13px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: var(--text-secondary); opacity: 0.9; }
+
+.marqueeContainer { width: 100%; overflow: hidden; display: flex; mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent); -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent); }
+.marqueeTrack { display: flex; gap: 48px; width: max-content; animation: marqueeScroll 25s linear infinite; }
+.marqueeTrack:hover { animation-play-state: paused; }
+
+@keyframes marqueeScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.markLink { font-weight: 700; font-size: 18px; color: var(--text-primary); opacity: .75; letter-spacing: .02em; white-space: nowrap; transition: color .2s, opacity .2s; }
+.markLink:hover { color: #1fd0e8; opacity: 1; }
 
 .statsSection { padding-block: 60px; }
 .statsGrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; max-width: 1200px; margin: 0 auto; padding-inline: 24px; }

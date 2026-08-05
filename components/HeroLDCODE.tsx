@@ -70,7 +70,21 @@ const slide = {
   prova: "+120 negócios já vendem online com a AONDA",
 };
 
-const marcas = ["Restaurantes", "Lojas", "Salões", "Clínicas", "Serviços", "Comércio local"];
+const marcas = [
+  "Restaurantes",
+  "Lojas",
+  "Salões",
+  "Clínicas",
+  "Serviços",
+  "Dentistas",
+  "Advogados",
+  "Médicos",
+  "Engenheiros",
+  "Arquitetos",
+  "Indústrias",
+  "Escritórios",
+  "Veterinários",
+];
 
 const stats = [
   { valor: 120, sufixo: "+", label: "Negócios atendidos" },
@@ -159,11 +173,13 @@ export default function HeroLDCODE() {
 
       <section className={s.trust}>
         <div className={s.trustWrap}>
-          <span className={s.trustLabel}>Feito para o seu tipo de negócio</span>
-          <div className={s.marks}>
-            {marcas.map((m) => (
-              <a key={m} className={s.markLink}>{m}</a>
-            ))}
+          <span className={s.trustLabel}>FEITO PARA O SEU TIPO DE NEGÓCIO</span>
+          <div className={s.marqueeContainer}>
+            <div className={s.marqueeTrack}>
+              {marcas.concat(marcas).map((m, idx) => (
+                <span key={`${m}-${idx}`} className={s.markLink}>{m}</span>
+              ))}
+            </div>
           </div>
         </div>
       </section>
