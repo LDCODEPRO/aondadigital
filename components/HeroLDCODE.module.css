@@ -90,7 +90,7 @@
 }
 .imgTilt { transition: transform .25s ease-out; transform: translate(var(--tiltTX, 0px), var(--tiltTY, 0px)); }
 .marcaNoEspaco.imgTilt { transform: translateX(-50%) translate(var(--tiltTX, 0px), var(--tiltTY, 0px)); }
-.heroLogoStage img { display: block; margin: 0 auto; width: 88%; transform: scale(1.3); filter: drop-shadow(0 20px 40px rgba(43,127,255,.4)); }
+.heroLogoStage img { display: block; margin: 0 auto; width: 88%; transform: scale(1.69) translateX(40px); filter: drop-shadow(0 20px 40px rgba(43,127,255,.4)); }
 .codeChip {
   position: absolute; font-family: monospace; font-size: 12.5px;
   background: rgba(10,10,22,.85); border: 1px solid var(--border); border-radius: 12px;
