@@ -60,7 +60,7 @@ export default function AtoDor() {
           ))}
         </div>
 
-        <p className={`${s.esteiraLegenda} ${s.center}`}>NÃO ENTENDE NADA DO MUNDO DIGITAL</p>
+        <p className={`${s.esteiraLegenda} ${s.center}`}>NÃO ENTENDE NADA DO MUNDO DIGITAL? NÃO PRECISA. ISSO É COM A NOSSA EQUIPE.</p>
         <div className={s.esteira} aria-hidden="true">
           <div className={s.esteiraTrilho}>
             {[...jargoes, ...jargoes].map((termo, i) => (
