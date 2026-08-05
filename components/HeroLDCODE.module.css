@@ -98,8 +98,8 @@
   display: flex; align-items: center; gap: 7px; color: #cfd6ea;
 }
 .codeChip .up { color: #37e6a4; font-weight: 700; }
-.codeChip.tl { top: -18px; left: -26px; animation: float1 6s ease-in-out infinite; }
-.codeChip.br { bottom: -18px; right: -22px; animation: float2 7s ease-in-out infinite; }
+.codeChip.tl { top: -60px; left: -26px; animation: float1 6s ease-in-out infinite; }
+.codeChip.br { bottom: -60px; right: -22px; animation: float2 7s ease-in-out infinite; }
 @keyframes float1 { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }
 @keyframes float2 { 0%,100% { transform: translateY(0); } 50% { transform: translateY(10px); } }
 
