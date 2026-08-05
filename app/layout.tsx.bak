@@ -1,0 +1,73 @@
+import type { Metadata, Viewport } from "next";
+import "./globals.css";
+import MatrixRain from "@/components/MatrixRain";
+import Spotlight from "@/components/Spotlight";
+import CursorGlow from "@/components/CursorGlow";
+import Header from "@/components/Header";
+
+export const metadata: Metadata = {
+  metadataBase: new URL("https://aonda.ldcodepro.com.br"),
+  title: {
+    default: "AONDA DIGITAL — Entre na Onda",
+    template: "%s · AONDA DIGITAL",
+  },
+  description:
+    "Você cuida dos seus clientes. Nós cuidamos da sua presença digital.",
+  applicationName: "AONDA DIGITAL",
+  icons: {
+    icon: [
+      { url: "/brand/favicon-32.png", sizes: "32x32", type: "image/png" },
+      { url: "/brand/favicon-16.png", sizes: "16x16", type: "image/png" },
+    ],
+    apple: [{ url: "/brand/favicon-180.png", sizes: "180x180" }],
+  },
+  openGraph: {
+    type: "website",
+    locale: "pt_BR",
+    siteName: "AONDA DIGITAL",
+    title: "AONDA DIGITAL — Entre na Onda",
+    description:
+      "Você cuida dos seus clientes. Nós cuidamos da sua presença digital.",
+  },
+  robots: { index: true, follow: true },
+};
+
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#FFFFFF" },
+    { media: "(prefers-color-scheme: dark)", color: "#050A14" },
+  ],
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{ children: React.ReactNode }>) {
+  return (
+    <html lang="pt-BR" suppressHydrationWarning>
+      <head>
+        {/* Sem JS o navegador nunca dispara o IntersectionObserver, e os 39 blocos
+            com opacity:0 ficariam invisíveis — a página inteira em branco.
+            O <noscript> devolve tudo à vista nesse cenário.
+            (O caso "JS ativo mas quebrado" é coberto no próprio Reveal, que
+            revela na hora se o IntersectionObserver não existir.) */}
+        {/* Aplica o tema salvo ANTES da primeira pintura. Sem isso a página
+            pisca no tema errado antes do React montar. */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var s=localStorage.getItem('aonda-tema')||'system';var d=s==='dark'||(s==='system'&&matchMedia('(prefers-color-scheme: dark)').matches);document.documentElement.dataset.theme=d?'dark':'light';}catch(e){}})()`,
+          }}
+        />
+        <noscript>
+          <style>{`.reveal{opacity:1!important;filter:none!important;transform:none!important}`}</style>
+        </noscript>
+      </head>
+      <body>
+        <MatrixRain />
+        <CursorGlow />
+        <Spotlight />
+        <Header />
+        {children}
+      </body>
+    </html>
+  );
+}

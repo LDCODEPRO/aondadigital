@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
+  <defs>
+    <linearGradient id="landGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#00E5FF"/>
+      <stop offset="1" stop-color="#0066FE"/>
+    </linearGradient>
+  </defs>
+  <rect x="8" y="8" width="32" height="24" rx="3" fill="none" stroke="url(#landGrad)" stroke-width="2.2"/>
+  <line x1="8" y1="14" x2="40" y2="14" stroke="url(#landGrad)" stroke-width="2"/>
+  <rect x="12" y="19" width="14" height="3" rx="1.5" fill="url(#landGrad)" opacity="0.8"/>
+  <rect x="12" y="25" width="9" height="3" rx="1.5" fill="url(#landGrad)" opacity="0.5"/>
+  <path d="M30 30 42 40l-4.5 1 1.5 4.5-3 1-1.5-4.5L31 44Z" fill="url(#landGrad)"/>
+</svg>

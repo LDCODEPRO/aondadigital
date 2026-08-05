@@ -1,0 +1,194 @@
+/* ATO 01 — ABERTURA
+   Objetivo único: parar o scroll.
+   Regra da Parte 04: nada entra deslizando. Só fade. */
+
+.hero {
+  position: relative;
+  z-index: 1;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-block: var(--space-20);
+  padding-top: calc(var(--space-20) + 64px); /* espaco do header fixo */
+}
+
+/* Sequência do Ato 01: primeiro a marca, silêncio, depois a frase.
+   Os delays constroem o tempo de leitura — não são decoração. */
+.fade {
+  opacity: 0;
+  animation: fade var(--dur-slow) var(--ease) forwards;
+}
+.d0 { animation-delay: 0ms; }
+.d1 { animation-delay: 800ms; }
+.d2 { animation-delay: 1300ms; }
+.d3 { animation-delay: 1750ms; }
+.d4 { animation-delay: 2200ms; }
+
+@keyframes fade {
+  from { opacity: 0; filter: blur(6px); }
+  to   { opacity: 1; filter: blur(0); }
+}
+
+/* O anel herda currentColor. Tem que seguir o tema, senão some no escuro. */
+.symbol { margin-bottom: var(--space-8); }
+
+.logo {
+  display: block;
+  width: min(90vw, 600px);
+  height: auto;
+  margin-inline: auto;
+  transform: translateY(-30%);
+}
+.logoLight { display: none; }
+
+.linha {
+  width: 140px;
+  height: 3px;
+  margin: 30px auto;
+  border-radius: 99px;
+  background: var(--wave-gradient);
+  opacity: 0.5;
+  animation: linhaRespira 3.2s var(--ease) infinite 2.6s;
+}
+@keyframes linhaRespira {
+  0%, 100% { opacity: 0.25; width: 100px; }
+  50%      { opacity: 0.7;  width: 160px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .linha { animation: none; opacity: 0.4; }
+}
+
+:global(html[data-theme="light"]) .logoDark { display: none; }
+:global(html[data-theme="light"]) .logoLight { display: block; }
+
+.title {
+  max-width: 90vw;
+  margin-inline: auto;
+}
+
+.tituloPrincipal {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: clamp(1.8rem, 5.2vw, var(--fs-hero));
+  max-width: 18ch;
+  margin-inline: auto;
+  text-wrap: balance;
+}
+
+.tituloSecundario {
+  display: block;
+  margin-top: var(--space-3);
+  font-size: clamp(1.1rem, 2.6vw, 1.6rem);
+  font-weight: var(--fw-regular);
+  color: var(--text-secondary);
+}
+
+.palavra {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.letra {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(0.35em);
+  animation: letraEntra 0.55s var(--ease) forwards;
+}
+.tituloPrincipal .letra {
+  background: linear-gradient(115deg, #00A9DE 0%, #4D7CFF 55%, #7B5CFF 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+@keyframes letraEntra {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .letra { opacity: 1; transform: none; animation: none; }
+}
+
+.subtitle {
+  margin-top: var(--space-6);
+  font-size: clamp(1.125rem, 1rem + 0.5vw, 1.5rem);
+  font-weight: var(--fw-regular);
+  color: var(--text-secondary);
+  max-width: 42ch;
+  margin-inline: auto;
+  line-height: 1.5;
+}
+.subtitle span { display: block; }
+
+.actions {
+  margin-top: var(--space-12);
+  display: flex;
+  gap: var(--space-4);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  font: inherit;
+  font-weight: var(--fw-semibold);
+  font-size: 1rem;
+  letter-spacing: 0.02em;
+  border-radius: var(--radius-btn);
+  padding: 18px 36px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  transition:
+    transform var(--dur-fast) var(--ease),
+    background-color var(--dur-fast) var(--ease),
+    box-shadow var(--dur-fast) var(--ease);
+}
+
+.primary {
+  background: linear-gradient(115deg, rgba(0,169,222,0.85) 0%, rgba(77,124,255,0.85) 55%, rgba(123,92,255,0.85) 100%);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.25);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: var(--shadow-sm);
+}
+.primary:hover { filter: brightness(1.08); transform: scale(var(--hover-scale)); box-shadow: var(--shadow-md); }
+.primary:active { transform: scale(0.98); }
+
+.secondary {
+  background: color-mix(in srgb, var(--surface) 55%, transparent);
+  color: var(--text-primary);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+.secondary:hover { background: color-mix(in srgb, var(--surface) 75%, transparent); transform: scale(var(--hover-scale)); }
+.secondary:active { transform: scale(0.98); }
+
+/* Indicador de scroll: a onda continua. Movimento mínimo, quase imperceptível. */
+.scroll {
+  position: absolute;
+  bottom: var(--space-8);
+  left: 50%;
+  translate: -50% 0;
+  width: 140px;
+  height: 3px;
+  border-radius: 99px;
+  background: var(--wave-gradient);
+  opacity: 0.5;
+  animation: breathe 3.2s var(--ease) infinite 2.6s;
+}
+@keyframes breathe {
+  0%, 100% { opacity: 0.25; width: 100px; }
+  50%      { opacity: 0.7;  width: 160px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fade { opacity: 1; animation: none; filter: none; }
+  .scroll { animation: none; opacity: 0.4; }
+}

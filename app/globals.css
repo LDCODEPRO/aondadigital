@@ -1,0 +1,224 @@
+@import "./tokens.css";
+
+/* Fonte Rajdhani carregada via next/font/google em app/layout.tsx (mesma
+   usada no Complexo-X) — gera a variável --font-rajdhani usada abaixo. */
+
+h1, h2, h3 { font-family: var(--font-heading); }
+h1 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: var(--fs-body);
+  line-height: var(--lh-normal);
+  color: var(--text-primary);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* O fundo nunca é totalmente vazio (Parte 03): grid técnico quase imperceptível.
+   O visitante não deve perceber conscientemente — deve sentir profundidade. */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-image:
+    linear-gradient(var(--border) 1px, transparent 1px),
+    linear-gradient(90deg, var(--border) 1px, transparent 1px);
+  background-size: 80px 80px;
+  opacity: 0.35;
+  mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000 20%, transparent 75%);
+}
+
+h1, h2, h3, h4 {
+  margin: 0;
+  letter-spacing: var(--tracking-tight);
+  line-height: var(--lh-tight);
+  font-weight: var(--fw-bold);
+  text-wrap: balance;
+}
+
+p { margin: 0; text-wrap: pretty; }
+
+:focus-visible {
+  outline: 2px solid var(--aonda-blue);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--container);
+  margin-inline: auto;
+  padding-inline: var(--pad-desktop);
+}
+@media (max-width: 1024px) { .container { padding-inline: var(--pad-tablet); } }
+@media (max-width: 640px)  { .container { padding-inline: var(--pad-mobile); } }
+
+/* ---------- Revelação no scroll (componente Reveal) ----------
+   Aprimoramento progressivo: o conteúdo NASCE VISÍVEL.
+   Só escondemos depois que o JS confirmou que está ativo (classe .js no <html>).
+   Sem isso, uma falha de JS deixaria 39 blocos invisíveis — a página inteira
+   em branco. A Parte 05 é explícita: jamais esconder conteúdo importante. */
+.reveal {
+  opacity: 0;
+  filter: blur(8px);
+  transform: translateY(20px);
+  transition:
+    opacity var(--dur-slow) var(--ease),
+    filter var(--dur-slow) var(--ease),
+    transform var(--dur-slow) var(--ease);
+}
+.reveal.is-shown {
+  opacity: 1;
+  filter: blur(0);
+  transform: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; filter: none; transform: none; transition: none; }
+}
+
+/* ---------- Ritmo entre seções: luxo é espaço (Parte 05) ---------- */
+
+.tiraImagens {
+  margin-top: var(--space-16);
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+}
+.tiraImagensTrilho {
+  display: flex;
+  width: max-content;
+  gap: var(--space-6);
+  animation: tiraRolar 38s linear infinite;
+}
+.tiraImagensItem {
+  height: 260px;
+  width: auto;
+  border-radius: var(--radius-card);
+  border: 1px solid var(--border);
+  object-fit: cover;
+  flex: none;
+}
+@keyframes tiraRolar {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .tiraImagensTrilho { animation: none; }
+}
+
+/* Traço decorativo entre seções: mesmo efeito de respiração do Hero */
+.tracoSecoes {
+  display: block;
+  width: min(85vw, 960px);
+  height: 3px;
+  margin: 24px auto;
+  border-radius: 99px;
+  background: var(--wave-gradient);
+  opacity: 0.55;
+  animation: tracoRespira 3.2s var(--ease) infinite 2.6s;
+}
+@keyframes tracoRespira {
+  0%, 100% { opacity: 0.3; }
+  50%      { opacity: 0.75; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .tracoSecoes { animation: none; opacity: 0.4; }
+}
+.section { padding-block: var(--space-40); position: relative; z-index: 1; }
+@media (max-width: 900px) { .section { padding-block: var(--space-20); } }
+
+.eyebrow {
+  font-size: var(--fs-caption);
+  font-weight: var(--fw-semibold);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  margin-bottom: var(--space-4);
+}
+.lead { color: var(--text-secondary); max-width: 60ch; margin-top: var(--space-6); }
+
+.redeParticulas {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* ---------- Fundo com esferas de luz + grade (portado do ldcodepro.com.br) ---------- */
+.fxFundo {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+.orbFundo {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  opacity: 0.35;
+}
+.orbFundo.b { width: 520px; height: 520px; background: radial-gradient(circle, #2b7fff, transparent 65%); }
+.orbFundo.c { width: 440px; height: 440px; background: radial-gradient(circle, #1fd0e8, transparent 65%); }
+.orbFundo.v { width: 480px; height: 480px; background: radial-gradient(circle, #8b4dff, transparent 65%); }
+.gridFundo {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.06) 1px, transparent 1px);
+  background-size: 54px 54px;
+  -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 40%, #000 30%, transparent 78%);
+  mask-image: radial-gradient(ellipse 80% 60% at 50% 40%, #000 30%, transparent 78%);
+  opacity: 0.5;
+}
+html[data-theme="light"] .gridFundo {
+  background-image:
+    linear-gradient(rgba(16,22,51,.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(16,22,51,.08) 1px, transparent 1px);
+}
+html[data-theme="light"] .orbFundo { opacity: 0.18; }
+
+/* ---------- Chuva matrix de fundo (portada do Complexo-X) ----------
+   Fixa atrás de tudo. A máscara faz o efeito existir com força no topo e
+   desaparecer onde o texto fica denso: a Parte 03 é clara — a animação nunca
+   pode chamar mais atenção que o conteúdo. */
+.matrix {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  mask-image: linear-gradient(to bottom, #000 0%, #000 22%, transparent 58%);
+  -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 22%, transparent 58%);
+}
+@media (prefers-reduced-motion: reduce) { .matrix { display: none; } }
+
+/* Brilho ambiente que segue o cursor pela página inteira. */
+.cursorGlow {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: radial-gradient(
+    500px circle at var(--glow-x, 50%) var(--glow-y, 50%),
+    color-mix(in srgb, var(--aonda-blue) 14%, transparent),
+    transparent 70%
+  );
+}
+@media (hover: none) { .cursorGlow { display: none; } }
+@media (prefers-reduced-motion: reduce) { .cursorGlow { display: none; } }

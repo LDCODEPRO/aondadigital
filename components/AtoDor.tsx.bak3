@@ -1,0 +1,66 @@
+import Reveal from "./Reveal";
+import s from "./Sections.module.css";
+
+/**
+ * ATO 02 — A DOR (Parte 04)
+ *
+ * Objetivo psicológico único: identificação. O visitante deve pensar "esse sou eu".
+ * Regra da Parte 04: mostrar problemas reais, sem vermelho, sem alarme, sem medo.
+ * Os cards são falas do próprio cliente — não acusações da agência.
+ */
+const dores = [
+  { texto: "Meu site já ficou para trás.", imagem: "/brand/dor/retro-site.png", cor: "#3DB4FF" },
+  { texto: "Minha empresa é boa. Mas não parece.", imagem: "/brand/dor/google.svg", cor: "#4285F4", destaque: true },
+  { texto: "Meu Instagram não transmite confiança.", imagem: "/brand/dor/instagram.svg", cor: "#C837AB", destaque: true },
+  { texto: "As pessoas pesquisam minha empresa e não encontram uma presença profissional.", imagem: "/brand/dor/busca-vazia.svg", cor: "#00C2A8" },
+  { texto: "Meu logo foi improvisado e nunca teve tempo de virar coisa séria.", imagem: "/brand/dor/logo-mal-feito.svg", cor: "#FF8A3D" },
+  { texto: "Sei que preciso resolver isso. Só não sei por onde começar.", imagem: "/brand/dor/interrogacao.svg", cor: "#00E5FF" },
+];
+
+export default function AtoDor() {
+  return (
+    <section className="section" id="dor" aria-labelledby="dor-titulo">
+      <div className="container">
+        <Reveal>
+          <p className={`eyebrow ${s.center}`}>O ponto de partida</p>
+          <h2 id="dor-titulo" className={`${s.h2wide} ${s.center}`}>
+            Talvez sua empresa tenha apenas um problema. Ela ainda não transmite
+            toda a qualidade que realmente possui.
+          </h2>
+        </Reveal>
+
+        <div className={`${s.grid} ${s.g6linha}`}>
+          {dores.map((dor, i) => (
+            <Reveal key={dor.texto} delay={i * 80}>
+              <div
+                className={`${s.card} ${s.dorCard}`}
+                data-spotlight
+                style={{ ["--tom" as string]: dor.cor }}
+              >
+                <img
+                  src={dor.imagem}
+                  alt=""
+                  aria-hidden="true"
+                  className={
+                    dor.imagem.endsWith(".png")
+                      ? s.dorImgFoto
+                      : dor.destaque
+                        ? `${s.dorImgIcone} ${s.dorImgDestaque}`
+                        : s.dorImgIcone
+                  }
+                />
+                <p className={s.cardTitle}>{dor.texto}</p>
+              </div>
+            </Reveal>
+          ))}
+        </div>
+
+        <Reveal>
+          <p className={s.transicao}>
+            Hoje a primeira impressão acontece antes da primeira conversa.
+          </p>
+        </Reveal>
+      </div>
+    </section>
+  );
+}

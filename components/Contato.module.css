@@ -1,0 +1,81 @@
+.form {
+  max-width: 640px;
+  margin-inline: auto;
+  display: grid;
+  gap: var(--space-6);
+}
+
+.linha {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-6);
+}
+@media (max-width: 640px) {
+  .linha { grid-template-columns: 1fr; }
+}
+
+.campo { display: grid; gap: var(--space-2); }
+
+.label {
+  font-size: var(--fs-caption);
+  font-weight: var(--fw-semibold);
+  color: var(--text-secondary);
+}
+
+.input {
+  font: inherit;
+  font-size: 1rem;
+  color: var(--text-primary);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-input);
+  padding: 16px 18px;
+  width: 100%;
+  transition: border-color var(--dur-fast) var(--ease),
+              box-shadow var(--dur-fast) var(--ease);
+}
+.input:hover { border-color: var(--gray-300); }
+.input:focus {
+  outline: none;
+  border-color: var(--aonda-blue);
+  box-shadow: 0 0 0 3px rgb(10 109 254 / 0.12);
+}
+.input::placeholder { color: var(--text-secondary); opacity: 0.7; }
+
+textarea.input { resize: vertical; min-height: 120px; }
+
+/* Honeypot: fora da tela, mas não display:none — bots ignoram display:none. */
+.honeypot {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.erro {
+  color: #B42318;
+  font-size: var(--fs-caption);
+  font-weight: var(--fw-semibold);
+}
+
+.aviso {
+  font-size: var(--fs-caption);
+  color: var(--text-secondary);
+  text-align: center;
+}
+
+.sucesso {
+  max-width: 640px;
+  margin-inline: auto;
+  text-align: center;
+  padding: var(--space-12);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  background: var(--bg-muted);
+}
+.sucessoTitulo {
+  font-size: var(--fs-h4);
+  font-weight: var(--fw-bold);
+}

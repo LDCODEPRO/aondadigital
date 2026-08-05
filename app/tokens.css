@@ -1,0 +1,152 @@
+/* ============================================================
+   AONDA DIGITAL — DESIGN TOKENS
+   Fonte: medição real dos pixels do brandkit (não estimado).
+   Contraste WCAG validado por cálculo, valores anotados por token.
+   ============================================================ */
+
+:root {
+  /* ---------- MARCA (extraído do logo) ---------- */
+  --aonda-ink:            #010E26; /* tinta do wordmark. 19.23:1 sobre branco  AA */
+  --aonda-blue:           #0A6DFE; /* azul "DIGITAL".    4.53:1 sobre branco  AA (margem apertada) */
+  --aonda-cyan:           #00D9FE; /* ponta clara da onda. 1.70:1 no branco → NUNCA usar como texto em fundo claro */
+  --aonda-blue-deep:      #0066FE; /* ponta escura da onda */
+  --aonda-ring:           #010E26; /* cor do anel do símbolo; inverte no tema escuro */
+
+  /* ---------- ESCALA DE AZUL (derivada do azul da marca) ---------- */
+  --blue-50:              #EEF5FF;
+  --blue-100:             #D9E8FF;
+  --blue-300:             #7FB0FF;
+  --blue-500:             #0A6DFE; /* = --aonda-blue */
+  --blue-600:             #0057D6; /* hover do botão primário */
+  --blue-700:             #0044A8;
+
+  /* ---------- NEUTROS ---------- */
+  --white:                #FFFFFF;
+  --gray-50:              #F7F8FA;
+  --gray-100:             #E8ECF2;
+  --gray-300:             #C3CAD6;
+  --text-primary:         #1B1F25; /* 15.62:1 no branco  AA */
+  --text-secondary:       #5F6877; /* 5.63:1  no branco  AA */
+  --graphite:             #20242B;
+
+  /* ---------- SUPERFÍCIES ---------- */
+  --bg:                   #F6F8FC;
+  --bg-muted:             #EEF2F8;
+  --surface:              var(--white);
+  --surface-2:            #FBFCFE;
+  --border:               #E2E8F2;
+  --border-forte:         #CBD5E5;
+  --realce-topo:          rgb(255 255 255 / 0.9);
+
+  /* ---------- GRADIENTE DA ONDA (medido no símbolo) ---------- */
+  --wave-gradient: linear-gradient(90deg,
+      var(--aonda-cyan) 0%,
+      #00A3FF 55%,
+      var(--aonda-blue-deep) 100%);
+
+  /* ---------- TIPOGRAFIA ---------- */
+  --font-sans: var(--font-manrope), "Segoe UI", sans-serif;
+  --font-heading: var(--font-space-grotesk), "Segoe UI", sans-serif;
+  --font-display: var(--font-space-grotesk), "Segoe UI", sans-serif;
+
+  --fs-hero:     clamp(2.5rem, 1.2rem + 4.2vw, 4.5rem);  /* 40 → 72px */
+  --fs-h1:       clamp(2rem,   1.1rem + 3vw,   3.5rem);  /* 32 → 56px */
+  --fs-h2:       clamp(1.75rem, 1rem + 2.2vw,  2.625rem);/* 28 → 42px */
+  --fs-h3:       clamp(1.5rem, 1rem + 1.4vw,   2rem);    /* 24 → 32px */
+  --fs-h4:       1.5rem;   /* 24px */
+  --fs-body:     1.125rem; /* 18px */
+  --fs-caption:  0.9375rem;/* 15px */
+
+  --lh-tight:   1.1;
+  --lh-normal:  1.6;
+  --tracking-tight: -0.02em;
+
+  --fw-regular: 400;
+  --fw-semibold: 600;
+  --fw-bold:    700;
+
+  /* ---------- ESPAÇAMENTO (escala da Parte 07) ---------- */
+  --space-1:  4px;   --space-2:  8px;   --space-3: 12px;
+  --space-4: 16px;   --space-6: 24px;   --space-8: 32px;
+  --space-12: 48px;  --space-16: 64px;  --space-20: 80px;
+  --space-30: 120px; --space-40: 88px;
+
+  /* ---------- RAIOS (Parte 05/07) ---------- */
+  --radius-input:  16px;
+  --radius-btn:    18px;
+  --radius-card-sm:20px;
+  --radius-card:   24px;
+
+  /* ---------- SOMBRAS (discretas) ---------- */
+  --shadow-sm: 0 1px 2px rgba(1, 14, 38, 0.04);
+  --shadow-md: 0 4px 16px rgba(1, 14, 38, 0.06);
+  --shadow-lg: 0 12px 40px rgba(1, 14, 38, 0.08);
+
+  /* ---------- MOVIMENTO (Parte 15: 250–800ms, ease-out, sem bounce) ---------- */
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --dur-fast:   250ms;
+  --dur-base:   450ms;
+  --dur-slow:   600ms;
+  --hover-scale: 1.02;
+
+  /* ---------- LAYOUT ---------- */
+  --container:  1720px;
+  --container-max: 1440px;
+  --pad-desktop: 80px;
+  --pad-tablet:  40px;
+  --pad-mobile:  24px;
+}
+
+/* Tema escuro: o símbolo inverte o anel via --aonda-ring */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg:             #050A14;
+    --bg-muted:       #0B1424;
+    /* Superfície bem acima do fundo. Antes era #0A1120 sobre #050A14:
+       2% de diferença, o card sumia na página. */
+    --surface:        #131D31;
+    --surface-2:      #0D1626;
+    --border:         rgb(255 255 255 / 0.10);
+    --border-forte:   rgb(255 255 255 / 0.18);
+    --gray-300:       #33405A;
+    --text-primary:   #F2F5FA;
+    --text-secondary: #A3B0C4;
+    --aonda-ring:     #FFFFFF;
+    --realce-topo:    rgb(255 255 255 / 0.10);
+  }
+}
+
+:root[data-theme="dark"] {
+  --bg:             #050A14;
+  --bg-muted:       #0B1424;
+  --surface:        #131D31;
+  --surface-2:      #0D1626;
+  --border:         rgb(255 255 255 / 0.10);
+  --border-forte:   rgb(255 255 255 / 0.18);
+  --gray-300:       #33405A;
+  --text-primary:   #F2F5FA;
+  --text-secondary: #A3B0C4;
+  --aonda-ring:     #FFFFFF;
+  --realce-topo:    rgb(255 255 255 / 0.10);
+  --shadow-md: 0 8px 24px rgb(0 0 0 / 0.45);
+  --shadow-lg: 0 20px 50px rgb(0 0 0 / 0.60);
+}
+
+:root[data-theme="light"] {
+  /* Página levemente acinzentada e card branco puro: sem isso card branco
+     sobre fundo branco fica igualmente sem profundidade. */
+  --bg:             #F6F8FC;
+  --bg-muted:       #EEF2F8;
+  --surface:        #FFFFFF;
+  --surface-2:      #FBFCFE;
+  --border:         #E2E8F2;
+  --border-forte:   #CBD5E5;
+  --text-primary:   #1B1F25;
+  --text-secondary: #5F6877;
+  --aonda-ring:     #010E26;
+  --realce-topo:    rgb(255 255 255 / 0.9);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root { --dur-fast: 1ms; --dur-base: 1ms; --dur-slow: 1ms; --hover-scale: 1; }
+}

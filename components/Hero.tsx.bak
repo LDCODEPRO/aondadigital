@@ -1,0 +1,43 @@
+import AondaSymbol from "./AondaSymbol";
+import s from "./Hero.module.css";
+
+/**
+ * ATO 01 — ABERTURA (Master Prompt, Parte 04)
+ *
+ * Objetivo psicológico único: parar o scroll.
+ * O visitante deve pensar apenas "Interessante..." — nada além disso.
+ *
+ * Copy fixada na Parte 06 e tratada como imutável:
+ * nenhuma outra frase da landing pode competir com o título.
+ */
+export default function Hero() {
+  return (
+    <section className={s.hero} aria-labelledby="hero-title">
+      <div className="container">
+        <div className={`${s.fade} ${s.d0} ${s.symbol}`}>
+          <AondaSymbol size={92} gradientId="heroWave" />
+        </div>
+
+        <h1 id="hero-title" className={`${s.fade} ${s.d1} ${s.title}`}>
+          Sua empresa merece parecer tão profissional quanto ela realmente é.
+        </h1>
+
+        <p className={`${s.fade} ${s.d2} ${s.subtitle}`}>
+          <span>Você cuida dos seus clientes.</span>
+          <span>Nós cuidamos da sua presença digital.</span>
+        </p>
+
+        <div className={`${s.fade} ${s.d3} ${s.actions}`}>
+          <a href="#contato" className={`${s.btn} ${s.primary}`}>
+            ENTRAR NA ONDA
+          </a>
+          <a href="#ecossistema" className={`${s.btn} ${s.secondary}`}>
+            Conheça o Ecossistema
+          </a>
+        </div>
+      </div>
+
+      <div className={s.scroll} aria-hidden="true" />
+    </section>
+  );
+}

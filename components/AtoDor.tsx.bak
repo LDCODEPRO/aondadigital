@@ -1,0 +1,50 @@
+import Reveal from "./Reveal";
+import s from "./Sections.module.css";
+
+/**
+ * ATO 02 — A DOR (Parte 04)
+ *
+ * Objetivo psicológico único: identificação. O visitante deve pensar "esse sou eu".
+ * Regra da Parte 04: mostrar problemas reais, sem vermelho, sem alarme, sem medo.
+ * Os cards são falas do próprio cliente — não acusações da agência.
+ */
+const dores = [
+  "Meu site já ficou para trás.",
+  "Minha empresa é boa. Mas não parece.",
+  "Meu Instagram não transmite confiança.",
+  "As pessoas pesquisam minha empresa e não encontram uma presença profissional.",
+  "Meu logo foi improvisado e nunca teve tempo de virar coisa séria.",
+  "Sei que preciso resolver isso. Só não sei por onde começar.",
+];
+
+export default function AtoDor() {
+  return (
+    <section className="section" id="dor" aria-labelledby="dor-titulo">
+      <div className="container">
+        <Reveal>
+          <p className={`eyebrow ${s.center}`}>O ponto de partida</p>
+          <h2 id="dor-titulo" className={`${s.h2wide} ${s.center}`}>
+            Talvez sua empresa tenha apenas um problema. Ela ainda não transmite
+            toda a qualidade que realmente possui.
+          </h2>
+        </Reveal>
+
+        <div className={`${s.grid} ${s.g3}`}>
+          {dores.map((dor, i) => (
+            <Reveal key={dor} delay={i * 80}>
+              <div className={`${s.card} ${s.dorCard}`} data-spotlight>
+                <p className={s.cardTitle}>{dor}</p>
+              </div>
+            </Reveal>
+          ))}
+        </div>
+
+        <Reveal>
+          <p className={s.transicao}>
+            Hoje a primeira impressão acontece antes da primeira conversa.
+          </p>
+        </Reveal>
+      </div>
+    </section>
+  );
+}
