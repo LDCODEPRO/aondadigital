@@ -61,7 +61,7 @@ export default function AtoDor() {
         </div>
 
         <p className={`${s.esteiraLegenda} ${s.center}`}>
-          NÃO ENTENDE NADA DO MUNDO DIGITAL?<br />ISSO É COM A NOSSA EQUIPE.
+          TRAZEMOS UM NOVO CONCEITO SOBRE O DIGITAL
         </p>
         <div className={s.esteira} aria-hidden="true">
           <div className={s.esteiraTrilho}>
