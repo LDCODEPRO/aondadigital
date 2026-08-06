@@ -564,7 +564,7 @@
 
 .barraAtiva { background: var(--wave-gradient); }
 
-/* ---------- REVELAÇÃO DA ONDA ---------- */
+/* ---------- REVELAÇÃO DA ONDA — CARROSSEL IA (CINZA MONOCROMÁTICO) ---------- */
 .revelacao {
   text-align: center;
   padding-block: var(--space-20);
@@ -573,11 +573,50 @@
   align-items: center;
 }
 .revelacaoConteudo {
-  padding-block: var(--space-12);
+  padding-bottom: var(--space-12);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+.iaCarrosselWrapper {
+  width: min(85vw, 960px);
+  overflow: hidden;
+  position: relative;
+  padding-block: var(--space-8);
+  mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+}
+.iaCarrosselTrack {
+  display: flex;
+  align-items: center;
+  gap: var(--space-12);
+  width: max-content;
+  animation: rolarIaInfinito 28s linear infinite;
+}
+.iaCarrosselWrapper:hover .iaCarrosselTrack {
+  animation-play-state: paused;
+}
+@keyframes rolarIaInfinito {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.iaItemCinza {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  opacity: 0.55;
+  transition: opacity var(--dur-fast) var(--ease), color var(--dur-fast) var(--ease), transform var(--dur-fast) var(--ease);
+}
+.iaItemCinza:hover {
+  opacity: 1;
+  color: var(--aonda-blue);
+  transform: scale(1.15);
+}
+.iaLogoSvg {
+  width: 38px;
+  height: 38px;
 }
 .ondaLinha {
   height: 3px;
