@@ -574,6 +574,14 @@
   opacity: 0.55;
   margin: 0 auto var(--space-16);
 }
+.ondaLinhaAbaixo {
+  height: 3px;
+  border-radius: 99px;
+  background: var(--wave-gradient);
+  width: min(85vw, 960px);
+  opacity: 0.55;
+  margin: var(--space-10) auto 0;
+}
 .simbolo3dContainer {
   display: flex;
   justify-content: center;
