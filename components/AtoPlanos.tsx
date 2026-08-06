@@ -4,9 +4,9 @@ import { useState } from "react";
 import Reveal from "./Reveal";
 import s from "./Sections.module.css";
 
-const planos = [
   {
     nome: "A Onda",
+    cor: "#00A9DE",
     precoAnual: "R$ 199,00",
     precoMensal: "R$ 249,00",
     tipoPreco: "pago",
@@ -33,6 +33,7 @@ const planos = [
   },
   {
     nome: "O Mar",
+    cor: "#4D7CFF",
     preco: "Entre em contato",
     tipoPreco: "contato",
     para: "Podemos desenvolver",
@@ -56,6 +57,7 @@ const planos = [
   },
   {
     nome: "Seja um Parceiro",
+    cor: "#7B5CFF",
     preco: "Consultor A Onda",
     tipoPreco: "consultor",
     para: "Expanda o ecossistema digital",
@@ -97,6 +99,7 @@ export default function AtoPlanos() {
               <article
                 className={`${s.card} ${s.plano} ${p.destaque ? s.planoDestaque : ""}`}
                 data-spotlight
+                style={{ ["--tom" as string]: p.cor }}
               >
                 <h3 className={s.planoNome}>{p.nome}</h3>
                 <div className={s.planoPrecoBox}>
