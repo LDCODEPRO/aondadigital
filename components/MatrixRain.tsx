@@ -74,6 +74,14 @@ export default function MatrixRain() {
       }
     }
 
+    // Imagem do logo da Aonda para cair junto com os caracteres
+    const imgLogo = new Image();
+    imgLogo.src = "/brand/aonda-simbolo.svg";
+    let logoCarregado = false;
+    imgLogo.onload = () => {
+      logoCarregado = true;
+    };
+
     function redimensionar() {
       const d = Math.min(window.devicePixelRatio || 1, 2);
       W = window.innerWidth;
@@ -82,9 +90,10 @@ export default function MatrixRain() {
       cv.height = H * d;
       cx.setTransform(d, 0, 0, d, 0, 0);
       cols = Math.floor(W / (FONT * 1.4));
-      drops = Array.from({ length: cols }, () => ({
+      drops = Array.from({ length: cols }, (_, index) => ({
         y: Math.random() * -H,
         v: 1.2 + Math.random() * 2.2,
+        isLogo: index % 6 === 0, // A cada 6 colunas, uma traz o logo caindo
       }));
     }
 
@@ -113,13 +122,23 @@ export default function MatrixRain() {
           const cy = col.y - t * STEP;
           if (cy < -STEP || cy > H + STEP) continue;
           const a = t === 0 ? alfaCabeca : alfaRastro * (1 - t / TRAIL);
-          cx.fillStyle =
-            t === 0 ? `rgba(${cabeca},${a})` : `rgba(${rastroRGB},${a})`;
-          cx.fillText(
-            GLYPHS[(Math.random() * GLYPHS.length) | 0],
-            px,
-            cy
-          );
+
+          // Se a cabeça desta coluna for um logo e a imagem já tiver carregado:
+          if (t === 0 && (col as any).isLogo && logoCarregado) {
+            cx.save();
+            cx.globalAlpha = a * 1.5;
+            const logoSize = FONT * 1.8;
+            cx.drawImage(imgLogo, px - logoSize / 2, cy - logoSize / 2, logoSize, logoSize);
+            cx.restore();
+          } else {
+            cx.fillStyle =
+              t === 0 ? `rgba(${cabeca},${a})` : `rgba(${rastroRGB},${a})`;
+            cx.fillText(
+              GLYPHS[(Math.random() * GLYPHS.length) | 0],
+              px,
+              cy
+            );
+          }
         }
       }
       raf = requestAnimationFrame(frame);
