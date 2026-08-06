@@ -9,18 +9,18 @@ import s from "./Sections.module.css";
  * Por isso cada card é ferramenta → benefício, nunca ferramenta isolada.
  */
 const mudancas = [
-  { o: "Identidade visual", p: "Mais confiança", icone: "identidade" },
-  { o: "Website", p: "Mais credibilidade", icone: "website" },
-  { o: "Google", p: "Mais descobertas", icone: "google" },
-  { o: "Instagram", p: "Mais autoridade", icone: "instagram" },
-  { o: "WhatsApp", p: "Mais organização", icone: "whatsapp" },
-  { o: "Inteligência artificial", p: "Mais produtividade", icone: "ia" },
+  { o: "Sites Profissionais", p: "Mais credibilidade", icone: "website" },
+  { o: "Google e SEO", p: "Mais descobertas", icone: "google" },
+  { o: "WhatsApp Business", p: "Mais organização", icone: "whatsapp" },
+  { o: "Área do Cliente", p: "Mais relacionamento", icone: "sistemas" },
+  { o: "Sistemas e Plataformas", p: "Mais escala", icone: "cloud" },
+  { o: "Inteligência Artificial", p: "Mais produtividade", icone: "ia" },
+  { o: "Integrações", p: "Tudo conectado", icone: "analytics" },
   { o: "Automações", p: "Mais tempo", icone: "automacao" },
   { o: "Landing pages", p: "Mais conversões", icone: "landing" },
-  { o: "Sistemas web", p: "Mais escala", icone: "sistemas" },
-  { o: "Cloud & Infra", p: "Mais estabilidade", icone: "cloud" },
+  { o: "Identidade visual", p: "Mais confiança", icone: "identidade" },
+  { o: "Instagram", p: "Mais autoridade", icone: "instagram" },
   { o: "Segurança", p: "Mais proteção", icone: "seguranca" },
-  { o: "Analytics", p: "Mais clareza", icone: "analytics" },
 ];
 
 export default function AtoTransformacao() {

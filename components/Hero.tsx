@@ -71,13 +71,13 @@ export default function Hero() {
         </h1>
 
         <p className={`${s.fade} ${s.d2} ${s.subtitle}`}>
-          <span>Você cuida dos seus clientes.</span>
-          <span>Nós cuidamos da sua presença digital.</span>
+          <span>Você cuida da sua empresa.</span>
+          <span>Nós cuidamos de toda a parte digital.</span>
         </p>
 
         <div className={`${s.fade} ${s.d3} ${s.actions}`}>
           <a href="#contato" className={`${s.btn} ${s.primary}`}>
-            ENTRAR NA ONDA
+            Solicitar Orçamento
           </a>
           <a href="#ecossistema" className={`${s.btn} ${s.secondary}`}>
             Conheça o Ecossistema

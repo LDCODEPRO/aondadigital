@@ -54,6 +54,11 @@ export default function AtoContato() {
           <h2 id="cta-titulo" className={s.ctaTitulo} style={{ marginTop: "var(--space-6)" }}>
             Você fala. Nós fazemos.
           </h2>
+          <p className="lead" style={{ marginInline: "auto", textAlign: "center", maxWidth: "52ch", marginTop: "var(--space-4)" }}>
+            Sua empresa merece uma presença digital profissional.<br />
+            Conte o que você precisa. Nós desenvolvemos tudo, entregamos pronto e
+            continuamos cuidando para que você possa focar apenas no seu negócio.
+          </p>
         </div>
 
         {estado === "ok" ? (
@@ -107,7 +112,7 @@ export default function AtoContato() {
               className={`${s.btn} ${s.primary}`}
               disabled={estado === "enviando"}
             >
-              {estado === "enviando" ? "ENVIANDO..." : "QUERO ENTRAR NA ONDA"}
+              {estado === "enviando" ? "ENVIANDO..." : "Quero um Orçamento"}
             </button>
 
             <p className={f.aviso}>
