@@ -923,15 +923,15 @@
 /* ---------- RODAPÉ ---------- */
 .footer {
   border-top: 1px solid var(--border);
-  padding-block: var(--space-16);
+  padding-block: var(--space-10);
   position: relative;
   z-index: 1;
 }
-.footerTop { display: flex; justify-content: center; text-align: center; gap: var(--space-12); flex-wrap: wrap; }
-.footerFrase { color: var(--text-secondary); max-width: 34ch; margin-top: var(--space-4); margin-inline: auto; }
+.footerTop { display: flex; justify-content: center; text-align: center; gap: var(--space-8); flex-wrap: wrap; }
+.footerFrase { color: var(--text-secondary); max-width: 34ch; margin-top: var(--space-3); margin-inline: auto; }
 .cadeia {
   display: flex; gap: var(--space-3); flex-wrap: wrap; align-items: center; justify-content: center;
-  margin-top: var(--space-12);
+  margin-top: var(--space-8);
   font-size: var(--fs-caption);
   color: var(--text-secondary);
   letter-spacing: 0.08em;
@@ -939,8 +939,8 @@
 }
 .cadeia span:not(:last-child)::after { content: " →"; opacity: 0.5; margin-left: var(--space-3); }
 .copyright {
-  margin-top: var(--space-12);
-  padding-top: var(--space-8);
+  margin-top: var(--space-8);
+  padding-top: var(--space-5);
   border-top: 1px solid var(--border);
   font-size: var(--fs-caption);
   color: var(--text-secondary);
