@@ -50,7 +50,7 @@ export default function Rodape() {
                 </a>
 
                 <a
-                  href="mailto:contato@aondadigital.com.br"
+                  href="mailto:aonda@aondadigital.com.br"
                   className={s.socialIconLink}
                   aria-label="E-mail"
                 >
