@@ -211,32 +211,40 @@
   margin-top: var(--space-16);
   margin-inline: auto;
   max-width: 760px;
-  padding: var(--space-16) var(--space-8);
+  padding: var(--space-12) var(--space-6);
   background: linear-gradient(115deg, rgba(0,169,222,0.16) 0%, rgba(77,124,255,0.16) 55%, rgba(123,92,255,0.16) 100%);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
   border-color: transparent;
+  overflow: hidden;
+}
+@media (max-width: 640px) {
+  .pegueOndaCard {
+    padding: var(--space-6) var(--space-4);
+  }
 }
 .pegueOndaCard .transicaoResto,
 .pegueOndaCard .transicaoLinha {
   color: var(--text-primary);
 }
-.pegueOndaCard .transicao { margin-top: var(--space-12); }
+.pegueOndaCard .transicao { margin-top: var(--space-8); }
 .pegueOndaCard .pegueOndaResto { color: var(--text-secondary); }
 .pegueOnda {
   text-align: center;
-  max-width: 90vw;
+  max-width: 100%;
   margin-inline: auto;
   line-height: 1.3;
 }
 .pegueOndaLogo {
   display: block;
-  width: min(90vw, 504px);
+  width: 100%;
+  max-width: 504px;
   height: auto;
   margin: 0 auto;
   border-radius: var(--radius-md);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
   border: 1px solid color-mix(in srgb, var(--aonda-blue) 30%, transparent);
+  object-fit: contain;
 }
 .pegueOndaLogoLight { display: none; }
 :global(html[data-theme="light"]) .pegueOndaLogoDark { display: none; }
@@ -244,7 +252,7 @@
 .pegueOndaResto {
   display: block;
   margin-top: var(--space-4);
-  font-size: clamp(1rem, 0.6rem + 1.6vw, 1.6rem);
+  font-size: clamp(0.95rem, 0.6rem + 1.6vw, 1.6rem);
   font-weight: var(--fw-regular);
   color: var(--text-secondary);
 }
@@ -258,7 +266,7 @@
 .transicao {
   margin-top: 0;
   text-align: center;
-  max-width: 95vw;
+  max-width: 100%;
   margin-inline: auto;
   line-height: 1.3;
 }
@@ -278,10 +286,6 @@
   height: auto;
   margin: 0 auto;
   perspective: 600px;
-  transform: perspective(600px) rotateX(28deg) rotateZ(-6deg);
-  filter:
-    drop-shadow(0 4px 4px rgba(0,0,0,.35))
-    drop-shadow(0 18px 22px rgba(0,0,0,.35));
   transition: transform .4s var(--ease);
 }
 .transicaoLogo3d:hover { transform: perspective(600px) rotateX(18deg) rotateZ(-3deg); }
@@ -292,9 +296,9 @@
   color: var(--text-primary);
 }
 .transicaoLinha {
-  display: inline-block;
-  font-size: clamp(1.4rem, 1rem + 3.6vw, 3rem);
-  white-space: nowrap;
+  display: block;
+  font-size: clamp(1.2rem, 0.8rem + 3.2vw, 2.5rem);
+  text-wrap: balance;
 }
 
 /* ---------- ATO 03 — A SOLUÇÃO ---------- */
