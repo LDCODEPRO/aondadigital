@@ -1000,8 +1000,10 @@
   height: 34px;
 }
 .cadeia {
-  display: flex; gap: var(--space-3); flex-wrap: wrap; align-items: center; justify-content: center;
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
   margin-top: var(--space-12);
+  max-width: 780px;
+  margin-inline: auto;
   font-size: var(--fs-caption);
   color: var(--text-secondary);
   letter-spacing: 0.08em;
