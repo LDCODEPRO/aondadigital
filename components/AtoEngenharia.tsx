@@ -145,20 +145,23 @@ export default function AtoEngenharia() {
         <Reveal>
           <div className={s.revelacao}>
             <div className={s.ondaLinha} />
-            <div className={s.simbolo3dContainer}>
-              <img
-                src="/brand/aonda-icone-glow.png"
-                alt="Símbolo AONDA 3D"
-                className={s.simbolo3dGrande}
-              />
+            <div className={s.revelacaoConteudo}>
+              <div className={s.simbolo3dContainer}>
+                <img
+                  src="/brand/aonda-icone-glow.png"
+                  alt="Símbolo AONDA 3D"
+                  className={s.simbolo3dGrande}
+                />
+              </div>
+              <p className={s.revelacaoTxt}>
+                Toda essa tecnologia. Agora ficou simples.
+              </p>
+              <p className="lead" style={{ marginInline: "auto", textAlign: "center", marginTop: "var(--space-4)" }}>
+                Você não compra tecnologia. Você entra em uma estrutura construída
+                durante anos.
+              </p>
             </div>
-            <p className={s.revelacaoTxt} style={{ marginTop: "var(--space-8)" }}>
-              Toda essa tecnologia. Agora ficou simples.
-            </p>
-            <p className="lead" style={{ marginInline: "auto", textAlign: "center" }}>
-              Você não compra tecnologia. Você entra em uma estrutura construída
-              durante anos.
-            </p>
+            <div className={s.ondaLinha} />
           </div>
         </Reveal>
       </div>

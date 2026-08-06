@@ -565,28 +565,33 @@
 .barraAtiva { background: var(--wave-gradient); }
 
 /* ---------- REVELAÇÃO DA ONDA ---------- */
-.revelacao { text-align: center; padding-block: var(--space-40); }
+.revelacao {
+  text-align: center;
+  padding-block: var(--space-20);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.revelacaoConteudo {
+  padding-block: var(--space-12);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 .ondaLinha {
   height: 3px;
   border-radius: 99px;
   background: var(--wave-gradient);
   width: min(85vw, 960px);
-  opacity: 0.55;
-  margin: 0 auto var(--space-16);
-}
-.ondaLinhaAbaixo {
-  height: 3px;
-  border-radius: 99px;
-  background: var(--wave-gradient);
-  width: min(85vw, 960px);
-  opacity: 0.55;
-  margin: var(--space-10) auto 0;
+  opacity: 0.65;
+  margin: 0 auto;
 }
 .simbolo3dContainer {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-block: var(--space-4);
+  margin-bottom: var(--space-6);
 }
 .simbolo3dGrande {
   width: 170px;
