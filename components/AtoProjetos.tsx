@@ -19,6 +19,7 @@ const projetos = [
     url: "https://avepro.com.br",
     status: "Em produção",
     cor: "#FF6B6B",
+    bgLogo: "/brand/avepro-logo.png",
   },
   {
     nome: "AKITEM",
@@ -90,6 +91,14 @@ export default function AtoProjetos() {
                 data-spotlight
                 style={{ ["--tom" as string]: p.cor }}
               >
+                {p.bgLogo && (
+                  <img
+                    src={p.bgLogo}
+                    alt=""
+                    aria-hidden="true"
+                    className={s.projetoBgLogo}
+                  />
+                )}
                 <div className={s.projTopo}>
                   <h3 className={s.cardTitle}>{p.nome}</h3>
                   <span className={s.projStatus}>{p.status}</span>

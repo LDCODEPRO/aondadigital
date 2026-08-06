@@ -643,6 +643,26 @@
   width: 86px;
   height: 86px;
 }
+.projeto {
+  position: relative;
+  overflow: hidden;
+}
+.projetoBgLogo {
+  position: absolute;
+  right: -5%;
+  bottom: -5%;
+  width: 65%;
+  height: auto;
+  max-height: 80%;
+  object-fit: contain;
+  opacity: 0.5;
+  pointer-events: none;
+  z-index: 0;
+}
+.projeto > * {
+  position: relative;
+  z-index: 1;
+}
 .ondaLinha {
   height: 3px;
   border-radius: 99px;
