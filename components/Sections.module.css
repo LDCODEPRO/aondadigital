@@ -945,6 +945,7 @@
 .footerBrandBlock {
   flex: 1;
   text-align: center;
+  margin-left: 25px;
 }
 .footerLogoImg {
   height: 112px;
