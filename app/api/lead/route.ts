@@ -85,5 +85,31 @@ export async function POST(req: Request) {
     );
   }
 
+  // Disparo via API Oficial Meta WhatsApp (Cloud API Graph)
+  const token = process.env.META_WA_TOKEN;
+  const phoneId = process.env.META_WA_PHONE_ID;
+  const recipient = process.env.META_WA_RECIPIENT || "5511999999999";
+
+  if (token && phoneId) {
+    try {
+      const waMsg = `🌊 *NOVO ORÇAMENTO - A ONDA DIGITAL*\n\n👤 *Nome:* ${nome}\n📞 *Contato:* ${contato}\n🏢 *Empresa:* ${empresa || "Não informada"}\n💬 *Mensagem:* ${mensagem || "Nenhuma"}`;
+      await fetch(`https://graph.facebook.com/v19.0/${phoneId}/messages`, {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${token}`,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          messaging_product: "whatsapp",
+          to: recipient,
+          type: "text",
+          text: { body: waMsg },
+        }),
+      });
+    } catch (waErr) {
+      console.error("[whatsapp-meta] erro ao enviar:", waErr);
+    }
+  }
+
   return NextResponse.json({ ok: true, id: lead.id });
 }
