@@ -144,6 +144,7 @@ export default function AtoEngenharia() {
       <div className="container">
         <Reveal>
           <div className={s.revelacao}>
+            <div className={s.ondaLinha} />
             <div className={s.simbolo3dContainer}>
               <img
                 src="/brand/aonda-icone-glow.png"
@@ -158,7 +159,6 @@ export default function AtoEngenharia() {
               Você não compra tecnologia. Você entra em uma estrutura construída
               durante anos.
             </p>
-            <div className={s.ondaLinhaAbaixo} />
           </div>
         </Reveal>
       </div>
