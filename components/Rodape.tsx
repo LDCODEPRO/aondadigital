@@ -50,7 +50,7 @@ export default function Rodape() {
 
         <div className={s.copyright}>
           <span>
-            © {new Date().getFullYear()} AONDA DIGITAL — ecossistema LDCODE
+            © 2024 A Onda Digital. Todos os direitos reservados.
           </span>
           <span>Desenvolvido sobre engenharia própria</span>
         </div>
