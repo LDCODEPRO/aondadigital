@@ -246,8 +246,14 @@
   color: var(--text-secondary);
 }
 
+.transicaoBloco {
+  margin-top: var(--space-12);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
 .transicao {
-  margin-top: var(--space-20);
+  margin-top: 0;
   text-align: center;
   max-width: 95vw;
   margin-inline: auto;
@@ -257,6 +263,11 @@
   font-size: 1.4rem;
   font-weight: var(--fw-semibold);
   color: var(--text-primary);
+}
+.transicaoMenor {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  opacity: 0.85;
 }
 .transicaoLogo3d {
   display: block;

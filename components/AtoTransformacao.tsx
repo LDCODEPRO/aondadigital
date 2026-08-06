@@ -52,15 +52,14 @@ export default function AtoTransformacao() {
         </div>
 
         <Reveal>
-          <p className={`${s.transicao} ${s.transicaoGrande}`}>
-            Nós desenvolvemos, construímos e cuidamos para você
-          </p>
-        </Reveal>
-
-        <Reveal delay={80}>
-          <p className={s.transicao}>
-            Você continua cuidando da empresa. Nós passamos a cuidar da tecnologia.
-          </p>
+          <div className={s.transicaoBloco}>
+            <p className={`${s.transicao} ${s.transicaoGrande}`}>
+              Nós desenvolvemos, construímos e cuidamos para você
+            </p>
+            <p className={`${s.transicao} ${s.transicaoMenor}`}>
+              Você continua cuidando da empresa. Nós passamos a cuidar da tecnologia.
+            </p>
+          </div>
         </Reveal>
       </div>
     </section>
