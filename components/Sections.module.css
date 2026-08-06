@@ -935,7 +935,17 @@
   position: relative;
   z-index: 1;
 }
-.footerTop { display: flex; justify-content: center; text-align: center; gap: var(--space-12); flex-wrap: wrap; }
+.footerTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-8);
+  flex-wrap: wrap;
+}
+.footerBrandBlock {
+  flex: 1;
+  text-align: center;
+}
 .footerLogoImg {
   height: 112px;
   width: auto;
@@ -944,6 +954,36 @@
   object-fit: contain;
 }
 .footerFrase { color: var(--text-secondary); max-width: 34ch; margin-top: var(--space-4); margin-inline: auto; }
+.footerSocials {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  margin-left: auto;
+}
+@media (max-width: 768px) {
+  .footerTop { justify-content: center; }
+  .footerSocials { margin-inline: auto; margin-top: var(--space-4); }
+}
+.socialIconLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border);
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.socialIconLink:hover {
+  transform: translateY(-3px) scale(1.08);
+  border-color: var(--aonda-blue);
+  box-shadow: 0 4px 16px rgba(0, 169, 222, 0.3);
+}
+.socialSvg {
+  width: 24px;
+  height: 24px;
+}
 .cadeia {
   display: flex; gap: var(--space-3); flex-wrap: wrap; align-items: center; justify-content: center;
   margin-top: var(--space-12);
