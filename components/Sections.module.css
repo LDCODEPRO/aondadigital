@@ -936,53 +936,8 @@
   position: relative;
   z-index: 1;
 }
-.footerGrid {
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
-  gap: var(--space-12);
-}
-@media (max-width: 860px) {
-  .footerGrid {
-    grid-template-columns: 1fr;
-    gap: var(--space-8);
-  }
-}
-.footerColMarca { display: flex; flex-direction: column; align-items: flex-start; }
-.footerWordmark {
-  display: block;
-  height: 52px;
-  width: auto;
-  object-fit: contain;
-  margin-left: -6px;
-}
-.footerWordmarkLight { display: none; }
-:global(html[data-theme="light"]) .footerWordmarkDark { display: none; }
-:global(html[data-theme="light"]) .footerWordmarkLight { display: block; }
-.footerFrase { color: var(--text-secondary); max-width: 34ch; margin-top: var(--space-4); line-height: 1.6; }
-.footerColTitulo {
-  font-weight: var(--fw-bold);
-  font-size: 1rem;
-  color: var(--text-primary);
-  margin-bottom: var(--space-4);
-}
-.footerLinks {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-3);
-  font-size: 0.92rem;
-  color: var(--text-secondary);
-}
-.footerLinks a {
-  color: var(--text-secondary);
-  text-decoration: none;
-  transition: color var(--dur-fast) var(--ease);
-}
-.footerLinks a:hover {
-  color: var(--aonda-blue);
-}
+.footerTop { display: flex; justify-content: space-between; gap: var(--space-12); flex-wrap: wrap; }
+.footerFrase { color: var(--text-secondary); max-width: 34ch; margin-top: var(--space-4); }
 .cadeia {
   display: flex; gap: var(--space-3); flex-wrap: wrap; align-items: center;
   margin-top: var(--space-12);
