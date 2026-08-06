@@ -924,7 +924,7 @@
 .footer {
   border-top: 1px solid var(--border);
   padding-top: 50px;
-  padding-bottom: 40px;
+  padding-bottom: 35px;
   position: relative;
   z-index: 1;
 }
