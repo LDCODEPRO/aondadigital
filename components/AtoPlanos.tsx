@@ -26,7 +26,7 @@ const planos = [
       "Manutenção contínua semanal",
       "Suporte",
     ],
-    ctaTexto: "Garantir A Onda",
+    ctaTexto: "Quero começar",
     ctaHref: "#contato",
     destaque: false,
   },
