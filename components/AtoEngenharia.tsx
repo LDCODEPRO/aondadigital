@@ -145,22 +145,39 @@ export default function AtoEngenharia() {
         <Reveal>
           <div className={s.revelacao}>
             <div className={s.ondaLinha} />
-            <div className={s.revelacaoConteudo}>
-              <div className={s.simbolo3dContainer}>
-                <img
-                  src="/brand/aonda-icone-glow.png"
-                  alt="Símbolo AONDA 3D"
-                  className={s.simbolo3dGrande}
-                />
+            
+            <div className={s.iaCarrosselWrapper}>
+              <div className={s.iaCarrosselTrack}>
+                {[
+                  { nome: "OpenAI / ChatGPT", cor: "#10a37f", icone: "⚡ OpenAI ChatGPT" },
+                  { nome: "Anthropic Claude", cor: "#d97757", icone: "🧠 Anthropic Claude" },
+                  { nome: "Google Gemini", cor: "#1a73e8", icone: "✦ Google Gemini" },
+                  { nome: "DeepSeek R1", cor: "#4d6bfe", icone: "🐋 DeepSeek R1" },
+                  { nome: "Meta Llama 3", cor: "#0467df", icone: "🦙 Meta Llama 3" },
+                  { nome: "Perplexity AI", cor: "#22b8cf", icone: "🔍 Perplexity AI" },
+                  { nome: "Microsoft Copilot", cor: "#0078d4", icone: "💻 MS Copilot" },
+                  { nome: "Midjourney v6", cor: "#9b51e0", icone: "🎨 Midjourney" },
+                  { nome: "xAI Grok", cor: "#ffffff", icone: "🚀 xAI Grok" },
+                  { nome: "ElevenLabs Voice", cor: "#ff5e3a", icone: "🎙️ ElevenLabs" },
+                ].concat([
+                  { nome: "OpenAI / ChatGPT", cor: "#10a37f", icone: "⚡ OpenAI ChatGPT" },
+                  { nome: "Anthropic Claude", cor: "#d97757", icone: "🧠 Anthropic Claude" },
+                  { nome: "Google Gemini", cor: "#1a73e8", icone: "✦ Google Gemini" },
+                  { nome: "DeepSeek R1", cor: "#4d6bfe", icone: "🐋 DeepSeek R1" },
+                  { nome: "Meta Llama 3", cor: "#0467df", icone: "🦙 Meta Llama 3" },
+                  { nome: "Perplexity AI", cor: "#22b8cf", icone: "🔍 Perplexity AI" },
+                  { nome: "Microsoft Copilot", cor: "#0078d4", icone: "💻 MS Copilot" },
+                  { nome: "Midjourney v6", cor: "#9b51e0", icone: "🎨 Midjourney" },
+                  { nome: "xAI Grok", cor: "#ffffff", icone: "🚀 xAI Grok" },
+                  { nome: "ElevenLabs Voice", cor: "#ff5e3a", icone: "🎙️ ElevenLabs" },
+                ]).map((ia, index) => (
+                  <div key={index} className={s.iaBadge} style={{ ["--ia-cor" as string]: ia.cor }}>
+                    <span className={s.iaBadgeTxt}>{ia.icone}</span>
+                  </div>
+                ))}
               </div>
-              <p className={s.revelacaoTxt}>
-                Toda essa tecnologia. Agora ficou simples.
-              </p>
-              <p className="lead" style={{ marginInline: "auto", textAlign: "center", marginTop: "var(--space-4)" }}>
-                Você não compra tecnologia. Você entra em uma estrutura construída
-                durante anos.
-              </p>
             </div>
+
             <div className={s.ondaLinha} />
           </div>
         </Reveal>
