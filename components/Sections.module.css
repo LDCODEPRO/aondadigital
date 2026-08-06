@@ -571,39 +571,16 @@
 }
 
 /* ---------- ATO 05 — PROJETOS ---------- */
-.esteiraProjetos {
-  margin-top: var(--space-12);
-  overflow: hidden;
-  width: 100%;
-  mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
-  -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
-}
-.esteiraProjetosTrilho {
-  display: flex;
-  gap: var(--space-4);
-  width: max-content;
-  animation: esteiraProjetosRolar 35s linear infinite;
-}
-.esteiraProjetosTrilho:hover {
-  animation-play-state: paused;
-}
-@keyframes esteiraProjetosRolar {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-
 .projeto {
   display: flex;
   flex-direction: column;
   gap: 6px;
-  padding: var(--space-4);
-  width: 280px;
-  flex-shrink: 0;
+  padding: var(--space-3);
+  aspect-ratio: 3 / 4.4;
   overflow: hidden;
   border-top: 3px solid color-mix(in srgb, var(--tom, var(--aonda-blue)) 70%, transparent);
   background:
     linear-gradient(180deg, color-mix(in srgb, var(--tom, var(--aonda-blue)) 10%, var(--surface)) 0%, var(--surface-2) 100%);
-  border-radius: var(--radius-card);
 }
 .projeto .cardTitle { font-size: 0.82rem; line-height: 1.2; }
 .projeto .eyebrow { font-size: 0.62rem; margin-bottom: 0; }
