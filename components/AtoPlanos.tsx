@@ -11,7 +11,7 @@ const planos = [
     precoAnual: "R$ 199,00",
     precoMensal: "R$ 249,00",
     tipoPreco: "pago",
-    para: "Sua entrada definitiva no mundo digital com estrutura profissional completa.",
+    para: "Quero entrar na Onda",
     itens: [
       "Desenvolvimento ou melhoria da identidade da marca",
       "Site profissional",
