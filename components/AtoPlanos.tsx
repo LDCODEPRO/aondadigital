@@ -4,6 +4,7 @@ import { useState } from "react";
 import Reveal from "./Reveal";
 import s from "./Sections.module.css";
 
+const planos = [
   {
     nome: "A Onda",
     cor: "#00A9DE",
@@ -17,8 +18,6 @@ import s from "./Sections.module.css";
       "Domínio .com.br",
       "Hospedagem",
       "Site seguro",
-      "Até 10 páginas",
-      "Layout para celular, tablet e computador",
       "Bate-papo online",
       "Formulário de contato",
       "Google Maps",
