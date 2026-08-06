@@ -643,6 +643,13 @@
   width: 86px;
   height: 86px;
 }
+.projetoQuadrado {
+  aspect-ratio: 1 / 1 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  padding: var(--space-4) !important;
+}
 .ondaLinha {
   height: 3px;
   border-radius: 99px;

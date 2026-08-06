@@ -86,7 +86,7 @@ export default function AtoProjetos() {
           {projetos.map((p, i) => (
             <Reveal key={p.nome} delay={i * 70}>
               <article
-                className={`${s.card} ${s.projeto}`}
+                className={`${s.card} ${s.projetoQuadrado}`}
                 data-spotlight
                 style={{ ["--tom" as string]: p.cor }}
               >
