@@ -41,19 +41,19 @@ body::before {
   mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000 20%, transparent 75%);
 }
 
-/* Marca d'água de fundo fixa com o logo sem fundo e 80% de transparência */
+/* Marca d'água de fundo fixa com o logo sem fundo e 80% de transparência (20% opacidade) */
 .marcaDaguaFundo {
   position: fixed;
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: min(85vw, 650px);
-  height: min(85vw, 650px);
+  width: min(90vw, 850px);
+  height: min(90vw, 850px);
   pointer-events: none;
-  z-index: 1;
+  z-index: 2;
   background: url("/brand/aonda-simbolo.png") center / contain no-repeat;
-  opacity: 0.8;
-  filter: drop-shadow(0 0 45px rgba(0, 169, 222, 0.45));
+  opacity: 0.22;
+  filter: drop-shadow(0 0 60px rgba(0, 169, 222, 0.6));
 }
 
 h1, h2, h3, h4 {
