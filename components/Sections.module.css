@@ -565,7 +565,11 @@
 .barraAtiva { background: var(--wave-gradient); }
 
 /* ---------- REVELAÇÃO DA ONDA ---------- */
-.revelacao { text-align: center; padding-block: var(--space-40); }
+.revelacao {
+  text-align: center;
+  padding-block: var(--space-40);
+  margin-top: 140px;
+}
 .ondaLinha {
   height: 3px;
   border-radius: 99px;
