@@ -334,6 +334,8 @@ export default function AtoEngenharia() {
                 ))}
               </div>
             </div>
+
+            <div className={s.ondaLinha} />
           </div>
         </Reveal>
       </div>
