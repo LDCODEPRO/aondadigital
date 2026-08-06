@@ -954,7 +954,7 @@
   display: block;
   object-fit: contain;
 }
-.footerFrase { color: var(--text-secondary); max-width: 34ch; margin-top: var(--space-4); margin-inline: auto; }
+.footerFrase { color: var(--text-secondary); max-width: 34ch; margin-top: var(--space-4); margin-inline: auto; transform: translateX(120px); }
 .footerRightCol {
   display: flex;
   flex-direction: row;
