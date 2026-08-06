@@ -30,7 +30,9 @@ export default function Rodape() {
             </p>
           </div>
 
-          <div className={s.footerSocials}>
+          <div className={s.footerSocialsWrapper}>
+            <span className={s.footerSocialsTitle}>REDES SOCIAIS</span>
+            <div className={s.footerSocials}>
             <a
               href="https://instagram.com"
               target="_blank"
@@ -70,6 +72,7 @@ export default function Rodape() {
               </svg>
             </a>
           </div>
+        </div>
         </div>
 
         <div className={s.cadeia} aria-label="Ecossistema LDCODE">
