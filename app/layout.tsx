@@ -84,6 +84,7 @@ export default function RootLayout({
         <FundoLDCODE />
         <RedeParticulas />
         <MatrixRain />
+        <CursorGlow />
         <Spotlight />
         <Header />
         {children}
