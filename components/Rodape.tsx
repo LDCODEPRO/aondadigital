@@ -14,7 +14,11 @@ export default function Rodape() {
       <div className="container">
         <div className={s.footerTop}>
           <div>
-            <AondaSymbol size={54} gradientId="footerWave" />
+            <img
+              src="/brand/logo-reduzido-transparente.png"
+              alt="AONDA DIGITAL"
+              className={s.footerLogoImg}
+            />
             <p className={s.footerFrase}>
               A tecnologia continua sendo nossa. A simplicidade passa a ser sua.
             </p>
@@ -27,11 +31,10 @@ export default function Rodape() {
           ))}
         </div>
 
-        <div className={s.copyright}>
+        <div className={s.copyright} style={{ justifyContent: "center", textAlign: "center" }}>
           <span>
-            © {new Date().getFullYear()} AONDA DIGITAL — ecossistema LDCODE
+            © 2024 A ONDA DIGITAL – Todos os direitos reservados. Marca integrante do ecossistema LDCODE - Desenvolvimento de Projetos e Sistemas.
           </span>
-          <span>Desenvolvido sobre engenharia própria</span>
         </div>
       </div>
     </footer>
