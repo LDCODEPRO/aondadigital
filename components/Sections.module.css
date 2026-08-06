@@ -982,8 +982,8 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 42px;
-  height: 42px;
+  width: 52px;
+  height: 52px;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid var(--border);
@@ -995,8 +995,8 @@
   box-shadow: 0 4px 16px rgba(0, 169, 222, 0.3);
 }
 .socialSvg {
-  width: 24px;
-  height: 24px;
+  width: 34px;
+  height: 34px;
 }
 .cadeia {
   display: flex; gap: var(--space-3); flex-wrap: wrap; align-items: center; justify-content: center;
