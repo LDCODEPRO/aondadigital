@@ -234,6 +234,9 @@
   width: min(90vw, 504px);
   height: auto;
   margin: 0 auto;
+  border-radius: var(--radius-md);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  border: 1px solid color-mix(in srgb, var(--aonda-blue) 30%, transparent);
 }
 .pegueOndaLogoLight { display: none; }
 :global(html[data-theme="light"]) .pegueOndaLogoDark { display: none; }
