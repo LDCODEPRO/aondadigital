@@ -649,6 +649,8 @@
   flex-direction: column !important;
   justify-content: space-between !important;
   padding: var(--space-4) !important;
+  border-top: 2px solid color-mix(in srgb, var(--tom, var(--aonda-blue)) 75%, transparent) !important;
+  background: linear-gradient(180deg, color-mix(in srgb, var(--tom, var(--aonda-blue)) 14%, var(--surface)) 0%, var(--surface-2) 100%) !important;
 }
 .ondaLinha {
   height: 3px;

@@ -18,7 +18,7 @@ const projetos = [
     tags: ["Node.js", "PostgreSQL", "Marketplace", "Multi-módulo"],
     url: "https://avepro.com.br",
     status: "Em produção",
-    cor: "#FF6B6B",
+    cor: "#00A9DE",
   },
   {
     nome: "AKITEM",
@@ -27,7 +27,7 @@ const projetos = [
     tags: ["Node.js", "PostgreSQL", "Geolocalização"],
     url: "https://precisouaquitem.com.br",
     status: "Em produção",
-    cor: "#4D9DE0",
+    cor: "#1E98EC",
   },
   {
     nome: "Elite Soluções Cred",
@@ -36,7 +36,7 @@ const projetos = [
     tags: ["Node.js", "PostgreSQL", "CRM"],
     url: "https://elitesolucoescred.com.br",
     status: "Em produção",
-    cor: "#D4A017",
+    cor: "#3C87F7",
   },
   {
     nome: "Complexo-X",
@@ -45,7 +45,7 @@ const projetos = [
     tags: ["IA", "Agentes", "Automação"],
     url: "https://complexo-x.com.br",
     status: "Em produção",
-    cor: "#7B5CFF",
+    cor: "#5374FD",
   },
   {
     nome: "Recanto das Calopsitas",
@@ -54,7 +54,7 @@ const projetos = [
     tags: ["Institucional", "SEO"],
     url: "https://recantodascalopsitas.com.br",
     status: "Em produção",
-    cor: "#2ECC71",
+    cor: "#6864FE",
   },
   {
     nome: "LDCODE",
@@ -63,7 +63,7 @@ const projetos = [
     tags: ["Arquitetura", "Plataformas", "Infraestrutura"],
     url: "https://ldcodepro.com.br",
     status: "Em produção",
-    cor: "#00A9DE",
+    cor: "#7B5CFF",
   },
 ];
 
