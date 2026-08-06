@@ -46,9 +46,8 @@ export default function AtoContato() {
         <div className={s.ctaFinal}>
           <AondaSymbol size={72} gradientId="ctaWave" />
           <h2 id="cta-titulo" className={s.ctaTitulo} style={{ marginTop: "var(--space-8)" }}>
-            Entre na Onda.
+            Você fala. Nós fazemos.
           </h2>
-          <p className={s.ctaSub}>O resto deixa com a gente.</p>
         </div>
 
         {estado === "ok" ? (
