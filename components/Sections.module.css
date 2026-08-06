@@ -334,11 +334,23 @@
 }
 .passos {
   display: flex;
-  gap: var(--space-6);
+  gap: var(--space-3);
   justify-content: center;
   flex-wrap: wrap;
   margin-top: var(--space-20);
-  align-items: stretch;
+  align-items: center;
+}
+.passoSeta {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--aonda-blue);
+  opacity: 0.65;
+  user-select: none;
+  align-self: center;
+  margin-inline: -4px;
+}
+@media (max-width: 900px) {
+  .passoSeta { display: none; }
 }
 .passo {
   position: relative;

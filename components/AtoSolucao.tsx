@@ -1,3 +1,4 @@
+import React from "react";
 import Reveal from "./Reveal";
 import s from "./Sections.module.css";
 
@@ -48,17 +49,23 @@ export default function AtoSolucao() {
 
         <ol className={s.passos} style={{ listStyle: "none", padding: 0 }}>
           {passos.map((p, i) => (
-            <Reveal
-              as="li"
-              key={p.n}
-              delay={i * 140}
-              className={s.passo}
-              style={{ ["--tom" as string]: p.cor }}
-            >
-              <p className={s.passoNum}>{p.n}</p>
-              <p className={s.passoTxt}>{p.t}</p>
-              <p className={s.cardText}>{p.d}</p>
-            </Reveal>
+            <React.Fragment key={p.n}>
+              <Reveal
+                as="li"
+                delay={i * 140}
+                className={s.passo}
+                style={{ ["--tom" as string]: p.cor }}
+              >
+                <p className={s.passoNum}>{p.n}</p>
+                <p className={s.passoTxt}>{p.t}</p>
+                <p className={s.cardText}>{p.d}</p>
+              </Reveal>
+              {i < passos.length - 1 && (
+                <div className={s.passoSeta} aria-hidden="true">
+                  →
+                </div>
+              )}
+            </React.Fragment>
           ))}
         </ol>
       </div>
