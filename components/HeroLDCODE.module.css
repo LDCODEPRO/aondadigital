@@ -139,7 +139,7 @@
 .markLink { font-weight: 700; font-size: 18px; color: var(--text-primary); opacity: .75; letter-spacing: .02em; white-space: nowrap; transition: color .2s, opacity .2s; }
 .markLink:hover { color: #1fd0e8; opacity: 1; }
 
-.statsSection { padding-block: 60px; }
+.statsSection { padding-top: 100px; padding-bottom: 60px; }
 .statsGrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; max-width: 1200px; margin: 0 auto; padding-inline: 24px; }
 @media (max-width: 900px) { .statsGrid { grid-template-columns: repeat(2, 1fr); } }
 .stat { text-align: center; padding: 34px 18px; border-radius: 16px; border: 1px solid var(--border); background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.01)); }
