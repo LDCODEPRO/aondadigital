@@ -14,7 +14,7 @@ export default function Rodape() {
       <div className="container">
         <div className={s.footerTop}>
           <div>
-            <AondaSymbol size={44} gradientId="footerWave" />
+            <AondaSymbol size={74} gradientId="footerWave" />
             <p className={s.footerFrase}>
               A tecnologia continua sendo nossa. A simplicidade passa a ser sua.
             </p>
