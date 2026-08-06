@@ -715,9 +715,33 @@
   color: #fff;
   box-shadow: var(--shadow-sm);
 }
-.planoPrecoBox { display: flex; align-items: baseline; gap: 8px; margin-top: var(--space-3); flex-wrap: wrap; }
+.planoPrecoBox { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-top: var(--space-3); flex-wrap: wrap; }
 .planoPrecoVal { font-size: 1.6rem; font-weight: var(--fw-bold); color: var(--aonda-blue); }
-.planoPeriodo { font-size: 0.8rem; color: var(--text-secondary); }
+.toggleContainerCard {
+  display: inline-flex;
+  gap: 3px;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  padding: 3px;
+  border-radius: 99px;
+}
+.toggleBtnCard {
+  font: inherit;
+  font-size: 0.75rem;
+  font-weight: var(--fw-semibold);
+  padding: 4px 12px;
+  border-radius: 99px;
+  border: none;
+  background: transparent;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all var(--dur-fast) var(--ease);
+}
+.toggleAtivoCard {
+  background: var(--aonda-blue);
+  color: #fff;
+  box-shadow: var(--shadow-sm);
+}
 .planoPara { color: var(--text-secondary); margin-top: var(--space-3); min-height: 3em; font-size: 0.95rem; }
 .planoLista { list-style: none; padding: 0; margin: var(--space-6) 0 var(--space-8); display: grid; gap: var(--space-3); }
 .planoLista li { padding-left: var(--space-6); position: relative; color: var(--text-secondary); font-size: 0.95rem; }

@@ -89,23 +89,6 @@ export default function AtoPlanos() {
           <h2 id="planos-titulo" className={s.h2wide}>
             Escolha como navegar no nosso ecossistema.
           </h2>
-
-          <div className={s.toggleContainer}>
-            <button
-              type="button"
-              className={`${s.toggleBtn} ${ciclo === "anual" ? s.toggleAtivo : ""}`}
-              onClick={() => setCiclo("anual")}
-            >
-              Anual (R$ 199/mês)
-            </button>
-            <button
-              type="button"
-              className={`${s.toggleBtn} ${ciclo === "mensal" ? s.toggleAtivo : ""}`}
-              onClick={() => setCiclo("mensal")}
-            >
-              Mensal (R$ 249/mês)
-            </button>
-          </div>
         </Reveal>
 
         <div className={s.planos3}>
@@ -125,9 +108,22 @@ export default function AtoPlanos() {
                       : p.preco}
                   </span>
                   {p.tipoPreco === "pago" && (
-                    <span className={s.planoPeriodo}>
-                      /{ciclo === "anual" ? "mês no plano anual" : "mês no plano mensal"}
-                    </span>
+                    <div className={s.toggleContainerCard}>
+                      <button
+                        type="button"
+                        className={`${s.toggleBtnCard} ${ciclo === "anual" ? s.toggleAtivoCard : ""}`}
+                        onClick={() => setCiclo("anual")}
+                      >
+                        Anual
+                      </button>
+                      <button
+                        type="button"
+                        className={`${s.toggleBtnCard} ${ciclo === "mensal" ? s.toggleAtivoCard : ""}`}
+                        onClick={() => setCiclo("mensal")}
+                      >
+                        Mensal
+                      </button>
+                    </div>
                   )}
                 </div>
                 <p className={s.planoPara}>{p.para}</p>
