@@ -82,10 +82,11 @@ export default function AtoProjetos() {
           </p>
         </Reveal>
 
-        <div className={`${s.grid} ${s.g6linha} ${s.gridQuadrado}`}>
-          {projetos.map((p, i) => (
-            <Reveal key={p.nome} delay={i * 70}>
+        <div className={s.esteiraProjetos}>
+          <div className={s.esteiraProjetosTrilho}>
+            {projetos.concat(projetos).map((p, i) => (
               <article
+                key={`${p.nome}-${i}`}
                 className={`${s.card} ${s.projeto}`}
                 data-spotlight
                 style={{ ["--tom" as string]: p.cor }}
@@ -125,8 +126,8 @@ export default function AtoProjetos() {
                   Conhecer projeto →
                 </a>
               </article>
-            </Reveal>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>
