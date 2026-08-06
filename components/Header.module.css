@@ -51,3 +51,30 @@
   /* Em telas muito estreitas o símbolo já identifica a marca. */
   .nome { display: none; }
 }
+
+/* ── Tagline central do cabeçalho ── */
+.tagline {
+  flex: 1;
+  margin: 0;
+  padding-inline: var(--space-4);
+  border-left: 1px solid color-mix(in srgb, var(--border) 70%, transparent);
+  font-size: 0.78rem;
+  font-weight: 400;
+  line-height: 1.45;
+  color: rgba(255, 255, 255, 0.55);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  align-self: center;
+}
+:global(html[data-theme="light"]) .tagline {
+  color: rgba(15, 23, 42, 0.5);
+}
+.destaque {
+  color: var(--aonda-blue);
+  font-weight: 500;
+}
+/* Ocultar antes de apertar o logo ou o seletor */
+@media (max-width: 860px) {
+  .tagline { display: none; }
+}

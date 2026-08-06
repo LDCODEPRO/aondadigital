@@ -30,6 +30,12 @@ export default function Header() {
           <AondaSymbol size={30} gradientId="headerWave" />
           <span className={h.nome}>AONDA</span>
         </a>
+
+        <p className={h.tagline} aria-hidden="true">
+          Nós <span className={h.destaque}>cuidamos do digital</span>, para você cuidar do que realmente importa:{" "}
+          <span className={h.destaque}>sua empresa</span>.
+        </p>
+
         <ThemeToggle />
       </div>
     </header>
