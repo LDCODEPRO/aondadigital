@@ -682,12 +682,18 @@
 
 /* ---------- ATO 08 — PLANOS ---------- */
 .planos { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: var(--space-8); margin-top: var(--space-16); }
+.planos3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-6); margin-top: var(--space-16); }
+@media (max-width: 960px) {
+  .planos3 { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+}
 .plano { display: flex; flex-direction: column; }
-.planoDestaque { border-color: var(--aonda-blue); box-shadow: var(--shadow-md); }
-.planoNome { font-size: var(--fs-h4); font-weight: var(--fw-bold); }
-.planoPara { color: var(--text-secondary); margin-top: var(--space-3); min-height: 3.4em; }
-.planoLista { list-style: none; padding: 0; margin: var(--space-8) 0 var(--space-8); display: grid; gap: var(--space-3); }
-.planoLista li { padding-left: var(--space-6); position: relative; color: var(--text-secondary); }
+.planoDestaque { border-color: var(--aonda-blue); box-shadow: var(--shadow-md); background: linear-gradient(180deg, color-mix(in srgb, var(--aonda-blue) 12%, var(--surface)) 0%, var(--surface-2) 100%); }
+.planoNome { font-size: var(--fs-h3); font-weight: var(--fw-bold); }
+.planoPrecoBox { margin-top: var(--space-3); }
+.planoPrecoVal { font-size: 1.5rem; font-weight: var(--fw-bold); color: var(--aonda-blue); }
+.planoPara { color: var(--text-secondary); margin-top: var(--space-3); min-height: 3em; font-size: 0.95rem; }
+.planoLista { list-style: none; padding: 0; margin: var(--space-6) 0 var(--space-8); display: grid; gap: var(--space-3); }
+.planoLista li { padding-left: var(--space-6); position: relative; color: var(--text-secondary); font-size: 0.95rem; }
 .planoLista li::before {
   content: "";
   position: absolute; left: 0; top: 0.6em;

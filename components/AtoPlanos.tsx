@@ -13,29 +13,52 @@ import s from "./Sections.module.css";
  */
 const planos = [
   {
-    nome: "Essencial",
-    para: "Para empresas que querem construir uma presença digital profissional do zero.",
+    nome: "A Onda",
+    preco: "R$ 249,00",
+    tipoPreco: "pago",
+    para: "Sua entrada definitiva no mundo digital com estrutura profissional completa.",
     itens: [
-      "Identidade visual",
-      "Website institucional",
-      "Google Meu Negócio",
-      "WhatsApp Business organizado",
-      "Otimização para busca",
+      "Presença digital estruturada",
+      "Identidade e posicionamento",
+      "Landing page otimizada",
+      "Integrações essenciais",
+      "Suporte e orientação",
     ],
+    ctaTexto: "Garantir A Onda",
+    ctaHref: "#contato",
     destaque: false,
   },
   {
-    nome: "Growth",
-    para: "Para empresas que querem acelerar usando todo o ecossistema.",
+    nome: "O Mar",
+    preco: "Entre em contato",
+    tipoPreco: "contato",
+    para: "Para empresas que necessitam de ecossistema robusto e automações sob medida.",
     itens: [
-      "Tudo do Essencial",
-      "Landing pages de conversão",
-      "Conteúdo e redes sociais",
-      "Automações de atendimento",
-      "Inteligência artificial aplicada",
-      "Evolução e monitoramento contínuos",
+      "Tudo do plano A Onda",
+      "Plataforma SaaS personalizada",
+      "Automações e Inteligência Artificial",
+      "CRM e gestão de operações",
+      "Monitoramento e evolução contínua",
     ],
+    ctaTexto: "Entre em Contato",
+    ctaHref: "#contato",
     destaque: true,
+  },
+  {
+    nome: "O Oceano",
+    preco: "Consultor A Onda",
+    tipoPreco: "consultor",
+    para: "Seja um consultor oficial A Onda e expanda o ecossistema digital.",
+    itens: [
+      "Licença de Consultor Oficial",
+      "Acesso completo ao ecossistema",
+      "Treinamentos e suporte dedicado",
+      "Modelos de negócios e plataformas",
+      "Participação em novos projetos",
+    ],
+    ctaTexto: "Seja um consultor A Onda",
+    ctaHref: "#contato",
+    destaque: false,
   },
 ];
 
@@ -46,17 +69,21 @@ export default function AtoPlanos() {
         <Reveal>
           <p className="eyebrow">Planos</p>
           <h2 id="planos-titulo" className={s.h2wide}>
-            Escolha apenas como deseja começar.
+            Escolha como navegar no nosso ecossistema.
           </h2>
         </Reveal>
 
-        <div className={s.planos}>
+        <div className={s.planos3}>
           {planos.map((p, i) => (
             <Reveal key={p.nome} delay={i * 120}>
               <article
-                className={`${s.card} ${s.plano} ${p.destaque ? s.planoDestaque : ""}`} data-spotlight
+                className={`${s.card} ${s.plano} ${p.destaque ? s.planoDestaque : ""}`}
+                data-spotlight
               >
                 <h3 className={s.planoNome}>{p.nome}</h3>
+                <div className={s.planoPrecoBox}>
+                  <span className={s.planoPrecoVal}>{p.preco}</span>
+                </div>
                 <p className={s.planoPara}>{p.para}</p>
                 <ul className={s.planoLista}>
                   {p.itens.map((item) => (
@@ -65,10 +92,10 @@ export default function AtoPlanos() {
                 </ul>
                 <div className={s.planoCta}>
                   <a
-                    href="#contato"
+                    href={p.ctaHref}
                     className={`${s.btn} ${p.destaque ? s.primary : s.secondary} ${s.full}`}
                   >
-                    Falar sobre o {p.nome}
+                    {p.ctaTexto}
                   </a>
                 </div>
               </article>
