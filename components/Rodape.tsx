@@ -14,12 +14,12 @@ export default function Rodape() {
       <div className="container">
         <div className={s.footerGrid}>
           <div className={s.footerColMarca}>
-            <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
-              <AondaSymbol size={44} gradientId="footerWave" />
+            <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
+              <AondaSymbol size={52} gradientId="footerWave" />
               <img
-                src="/brand/aonda-so-palavra.png"
+                src="/brand/aonda-so-palavra-semfundo.png"
                 alt="A ONDA"
-                style={{ height: "32px", width: "auto", objectFit: "contain" }}
+                style={{ height: "56px", width: "auto", objectFit: "contain" }}
               />
             </div>
             <p className={s.footerFrase}>
