@@ -21,7 +21,7 @@ export default function Rodape() {
         <div className={s.footerTop}>
           <div>
             <img
-              src="/brand/logo-reduzido-transparente.png"
+              src="/brand/aonda-simbolo-sem-fundo.png"
               alt="AONDA DIGITAL"
               className={s.footerLogoImg}
             />
