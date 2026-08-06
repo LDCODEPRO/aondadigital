@@ -17,6 +17,10 @@ const mudancas = [
   { o: "Inteligência artificial", p: "Mais produtividade", icone: "ia" },
   { o: "Automações", p: "Mais tempo", icone: "automacao" },
   { o: "Landing pages", p: "Mais conversões", icone: "landing" },
+  { o: "Sistemas web", p: "Mais escala", icone: "sistemas" },
+  { o: "Cloud & Infra", p: "Mais estabilidade", icone: "cloud" },
+  { o: "Segurança", p: "Mais proteção", icone: "seguranca" },
+  { o: "Analytics", p: "Mais clareza", icone: "analytics" },
 ];
 
 export default function AtoTransformacao() {
@@ -34,7 +38,7 @@ export default function AtoTransformacao() {
           </p>
         </Reveal>
 
-        <div className={`${s.grid} ${s.g4}`}>
+        <div className={`${s.grid} ${s.g6linha} ${s.gridQuadrado}`}>
           {mudancas.map((m, i) => (
             <Reveal key={m.o} delay={i * 60}>
               <div className={`${s.card} ${s.transformCard}`} data-spotlight>
