@@ -689,8 +689,35 @@
 .plano { display: flex; flex-direction: column; }
 .planoDestaque { border-color: var(--aonda-blue); box-shadow: var(--shadow-md); background: linear-gradient(180deg, color-mix(in srgb, var(--aonda-blue) 12%, var(--surface)) 0%, var(--surface-2) 100%); }
 .planoNome { font-size: var(--fs-h3); font-weight: var(--fw-bold); }
-.planoPrecoBox { margin-top: var(--space-3); }
-.planoPrecoVal { font-size: 1.5rem; font-weight: var(--fw-bold); color: var(--aonda-blue); }
+.toggleContainer {
+  display: inline-flex;
+  gap: 8px;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  padding: 4px;
+  border-radius: 99px;
+  margin-top: var(--space-6);
+}
+.toggleBtn {
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: var(--fw-semibold);
+  padding: 8px 20px;
+  border-radius: 99px;
+  border: none;
+  background: transparent;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all var(--dur-fast) var(--ease);
+}
+.toggleAtivo {
+  background: var(--aonda-blue);
+  color: #fff;
+  box-shadow: var(--shadow-sm);
+}
+.planoPrecoBox { display: flex; align-items: baseline; gap: 8px; margin-top: var(--space-3); flex-wrap: wrap; }
+.planoPrecoVal { font-size: 1.6rem; font-weight: var(--fw-bold); color: var(--aonda-blue); }
+.planoPeriodo { font-size: 0.8rem; color: var(--text-secondary); }
 .planoPara { color: var(--text-secondary); margin-top: var(--space-3); min-height: 3em; font-size: 0.95rem; }
 .planoLista { list-style: none; padding: 0; margin: var(--space-6) 0 var(--space-8); display: grid; gap: var(--space-3); }
 .planoLista li { padding-left: var(--space-6); position: relative; color: var(--text-secondary); font-size: 0.95rem; }

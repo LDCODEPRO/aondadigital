@@ -1,20 +1,14 @@
+"use client";
+
+import { useState } from "react";
 import Reveal from "./Reveal";
 import s from "./Sections.module.css";
 
-/**
- * ATO 08 — PLANOS (Parte 04)
- *
- * Somente dois. Sem tabela comparativa gigante, sem cinquenta recursos.
- *
- * INTEGRIDADE: nenhum preço é exibido porque nenhum preço foi definido pelo
- * Diretor. Inventar valor seria criar informação falsa em página pública.
- * O escopo de cada plano precisa de confirmação antes de virar compromisso
- * comercial — está aqui como estrutura, não como oferta fechada.
- */
 const planos = [
   {
     nome: "A Onda",
-    preco: "R$ 249,00",
+    precoAnual: "R$ 199,00",
+    precoMensal: "R$ 249,00",
     tipoPreco: "pago",
     para: "Sua entrada definitiva no mundo digital com estrutura profissional completa.",
     itens: [
@@ -85,6 +79,8 @@ const planos = [
 ];
 
 export default function AtoPlanos() {
+  const [ciclo, setCiclo] = useState<"anual" | "mensal">("anual");
+
   return (
     <section className="section" id="planos" aria-labelledby="planos-titulo">
       <div className="container">
@@ -93,6 +89,23 @@ export default function AtoPlanos() {
           <h2 id="planos-titulo" className={s.h2wide}>
             Escolha como navegar no nosso ecossistema.
           </h2>
+
+          <div className={s.toggleContainer}>
+            <button
+              type="button"
+              className={`${s.toggleBtn} ${ciclo === "anual" ? s.toggleAtivo : ""}`}
+              onClick={() => setCiclo("anual")}
+            >
+              Anual (R$ 199/mês)
+            </button>
+            <button
+              type="button"
+              className={`${s.toggleBtn} ${ciclo === "mensal" ? s.toggleAtivo : ""}`}
+              onClick={() => setCiclo("mensal")}
+            >
+              Mensal (R$ 249/mês)
+            </button>
+          </div>
         </Reveal>
 
         <div className={s.planos3}>
@@ -104,7 +117,18 @@ export default function AtoPlanos() {
               >
                 <h3 className={s.planoNome}>{p.nome}</h3>
                 <div className={s.planoPrecoBox}>
-                  <span className={s.planoPrecoVal}>{p.preco}</span>
+                  <span className={s.planoPrecoVal}>
+                    {p.tipoPreco === "pago"
+                      ? ciclo === "anual"
+                        ? p.precoAnual
+                        : p.precoMensal
+                      : p.preco}
+                  </span>
+                  {p.tipoPreco === "pago" && (
+                    <span className={s.planoPeriodo}>
+                      /{ciclo === "anual" ? "mês no plano anual" : "mês no plano mensal"}
+                    </span>
+                  )}
                 </div>
                 <p className={s.planoPara}>{p.para}</p>
                 <ul className={s.planoLista}>
