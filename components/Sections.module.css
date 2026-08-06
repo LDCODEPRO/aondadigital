@@ -607,37 +607,28 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 8px;
   color: var(--text-secondary);
-  opacity: 0.3;
+  opacity: 0.55;
   position: relative;
   transition: opacity var(--dur-fast) var(--ease), color var(--dur-fast) var(--ease), transform var(--dur-fast) var(--ease);
 }
 .iaItemCinza:hover {
   opacity: 1;
   color: var(--aonda-blue);
-  transform: scale(1.15);
+  transform: scale(1.08);
 }
 .iaNomeTooltip {
-  position: absolute;
-  bottom: -34px;
-  left: 50%;
-  transform: translateX(-50%) translateY(4px);
+  display: block;
   white-space: nowrap;
-  font-size: var(--fs-xs);
+  font-size: 0.76rem;
   font-weight: var(--fw-bold);
-  color: #ffffff;
-  background: rgba(10, 20, 40, 0.92);
-  border: 1px solid rgba(0, 169, 222, 0.4);
-  padding: 4px 10px;
-  border-radius: 6px;
-  pointer-events: none;
-  opacity: 0;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5), 0 0 10px rgba(0, 169, 222, 0.2);
-  transition: opacity 0.2s ease, transform 0.2s ease;
+  color: var(--text-secondary);
+  letter-spacing: 0.02em;
+  transition: color var(--dur-fast) var(--ease);
 }
 .iaItemCinza:hover .iaNomeTooltip {
-  opacity: 1;
-  transform: translateX(-50%) translateY(0);
+  color: var(--aonda-blue);
 }
 .iaLogoSvg {
   width: 86px;
@@ -936,14 +927,8 @@
   position: relative;
   z-index: 1;
 }
-.footerTop { display: flex; justify-content: space-between; gap: var(--space-12); flex-wrap: wrap; align-items: flex-start; }
-.footerLeft { margin-left: -40px; }
+.footerTop { display: flex; justify-content: space-between; gap: var(--space-12); flex-wrap: wrap; }
 .footerFrase { color: var(--text-secondary); max-width: 34ch; margin-top: var(--space-4); }
-.footerRight { display: flex; gap: var(--space-12); flex-wrap: wrap; }
-.footerColTitulo { font-weight: var(--fw-bold); color: var(--text-primary); margin-bottom: var(--space-3); font-size: 0.95rem; }
-.footerColLinks { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: var(--space-2); }
-.footerColLinks a { color: var(--text-secondary); text-decoration: none; font-size: 0.9rem; transition: color var(--dur-fast) var(--ease); }
-.footerColLinks a:hover { color: var(--aonda-blue); }
 .cadeia {
   display: flex; gap: var(--space-3); flex-wrap: wrap; align-items: center;
   margin-top: var(--space-12);
