@@ -44,8 +44,14 @@ export default function AtoContato() {
     <section className="section" id="contato" aria-labelledby="cta-titulo">
       <div className="container">
         <div className={s.ctaFinal}>
-          <AondaSymbol size={72} gradientId="ctaWave" />
-          <h2 id="cta-titulo" className={s.ctaTitulo} style={{ marginTop: "var(--space-8)" }}>
+          <div className={s.ctaLogo3dContainer}>
+            <img
+              src="/brand/aonda-icone-glow.png"
+              alt="Símbolo AONDA 3D"
+              className={s.ctaLogo3d}
+            />
+          </div>
+          <h2 id="cta-titulo" className={s.ctaTitulo} style={{ marginTop: "var(--space-6)" }}>
             Você fala. Nós fazemos.
           </h2>
         </div>

@@ -814,6 +814,22 @@
 
 /* ---------- ATO 09 — CTA FINAL ---------- */
 .ctaFinal { text-align: center; padding-block: var(--space-40); }
+.ctaLogo3dContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: var(--space-4);
+}
+.ctaLogo3d {
+  width: 170px;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 15px 35px rgba(0, 169, 222, 0.5));
+  transition: transform .3s ease;
+}
+.ctaLogo3d:hover {
+  transform: scale(1.08) rotate(3deg);
+}
 .ctaTitulo { font-size: var(--fs-hero); letter-spacing: var(--tracking-tight); }
 .ctaSub { color: var(--text-secondary); font-size: var(--fs-h4); margin-top: var(--space-6); }
 
