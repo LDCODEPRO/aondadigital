@@ -6,7 +6,13 @@ import s from "./Sections.module.css";
  * A cadeia do ecossistema aparece discretamente, sem explicação.
  * Quem entendeu, entendeu.
  */
-const cadeia = ["LDCODE", "XOS", "COMPLEXO-X", "AGENTE-X", "AONDA DIGITAL"];
+const cadeia = [
+  { n: "LDCODE", url: "https://ldcodepro.com.br" },
+  { n: "XOS", url: "" },
+  { n: "COMPLEXO-X", url: "https://complexox.ldcodepro.com.br" },
+  { n: "AGENTE-X", url: "" },
+  { n: "AONDA DIGITAL", url: "" },
+];
 
 export default function Rodape() {
   return (
@@ -26,8 +32,16 @@ export default function Rodape() {
         </div>
 
         <div className={s.cadeia} aria-label="Ecossistema LDCODE">
-          {cadeia.map((n) => (
-            <span key={n}>{n}</span>
+          {cadeia.map((item) => (
+            <span key={item.n}>
+              {item.url ? (
+                <a href={item.url} target="_blank" rel="noopener noreferrer" className={s.cadeiaLink}>
+                  {item.n}
+                </a>
+              ) : (
+                item.n
+              )}
+            </span>
           ))}
         </div>
 
