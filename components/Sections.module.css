@@ -155,8 +155,50 @@
   object-fit: cover;
 }
 .dorCard .cardTitle { font-weight: var(--fw-semibold); font-size: 0.92rem; line-height: 1.32; letter-spacing: -0.01em; color: var(--text-primary); text-align: center; width: 100%; text-transform: uppercase; }
+
+.esteiraLogosCards {
+  margin-top: var(--space-10);
+  overflow: hidden;
+  width: 100%;
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+.esteiraLogosTrilho {
+  display: flex;
+  align-items: center;
+  gap: var(--space-12);
+  width: max-content;
+  animation: esteiraLogosRolar 22s linear infinite;
+}
+.esteiraLogosTrilho:hover {
+  animation-play-state: paused;
+}
+.esteiraLogoItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  opacity: 0.8;
+  transition: opacity .2s, transform .2s;
+}
+.esteiraLogoItem:hover {
+  opacity: 1;
+  transform: scale(1.15);
+}
+.esteiraLogoItem img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+@keyframes esteiraLogosRolar {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-33.33%); }
+}
+
 .esteiraLegenda {
-  margin-top: var(--space-16);
+  margin-top: var(--space-12);
   font-size: 1.05rem;
   font-weight: var(--fw-semibold);
   letter-spacing: 0.04em;
