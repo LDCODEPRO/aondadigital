@@ -78,14 +78,9 @@ export default function AtoDor() {
           <div className={`${s.card} ${s.pegueOndaCard}`} data-spotlight>
             <p className={s.pegueOnda}>
               <img
-                src="/brand/aonda-so-palavra.png"
-                alt="AONDA"
-                className={`${s.pegueOndaLogo} ${s.pegueOndaLogoDark}`}
-              />
-              <img
-                src="/brand/aonda-so-palavra-light.png"
-                alt="AONDA"
-                className={`${s.pegueOndaLogo} ${s.pegueOndaLogoLight}`}
+                src="/brand/aonda-logo-completo-semfundo.png"
+                alt="AONDA DIGITAL"
+                className={s.pegueOndaLogo}
               />
               <span className={s.pegueOndaResto}>faz por você e sua empresa surfa na tecnologia</span>
             </p>
