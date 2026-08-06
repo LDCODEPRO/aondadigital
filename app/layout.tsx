@@ -82,6 +82,7 @@ export default function RootLayout({
       </head>
       <body>
         <FundoLDCODE />
+        <div className="marcaDaguaFundo" aria-hidden="true" />
         <RedeParticulas />
         <MatrixRain />
         <CursorGlow />
