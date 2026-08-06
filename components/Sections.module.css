@@ -923,8 +923,8 @@
 /* ---------- RODAPÉ ---------- */
 .footer {
   border-top: 1px solid var(--border);
-  padding-top: 55px;
-  padding-bottom: 55px;
+  padding-top: 50px;
+  padding-bottom: 40px;
   position: relative;
   z-index: 1;
 }
