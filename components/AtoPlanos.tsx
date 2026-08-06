@@ -70,7 +70,7 @@ const planos = [
       "Sem precisar entender de tecnologia",
       "Trabalhe de onde estiver",
     ],
-    ctaTexto: "Seja um consultor A Onda",
+    ctaTexto: "Quero saber mais",
     ctaHref: "#contato",
     destaque: false,
   },
