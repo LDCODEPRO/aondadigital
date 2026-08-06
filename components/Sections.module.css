@@ -343,10 +343,10 @@
 .passo {
   position: relative;
   overflow: hidden;
-  flex: 1 1 220px;
-  max-width: 280px;
+  flex: 1 1 180px;
+  max-width: 230px;
   text-align: center;
-  padding: var(--space-8) var(--space-6);
+  padding: var(--space-8) var(--space-4);
   border-radius: var(--radius-card);
   border: 1px solid var(--border);
   border-top: 3px solid color-mix(in srgb, var(--tom, var(--aonda-blue)) 70%, transparent);

@@ -17,9 +17,11 @@ const naoPrecisa = [
 ];
 
 const passos = [
-  { n: "01", t: "Você envia", d: "Logo, fotos e WhatsApp.", cor: "#00A9DE" },
-  { n: "02", t: "Nós construímos", d: "Identidade, site, Google, automações.", cor: "#4D7CFF" },
-  { n: "03", t: "Sua empresa aparece", d: "Pronta, organizada e no ar.", cor: "#7B5CFF" },
+  { n: "01", t: "Você conta o que precisa", d: "", cor: "#00A9DE" },
+  { n: "02", t: "Nós planejamos", d: "", cor: "#268FE8" },
+  { n: "03", t: "Nós desenvolvemos", d: "", cor: "#4D7CFF" },
+  { n: "04", t: "Você aprova", d: "", cor: "#646BFB" },
+  { n: "05", t: "Nós continuamos cuidando", d: "", cor: "#7B5CFF" },
 ];
 
 export default function AtoSolucao() {
