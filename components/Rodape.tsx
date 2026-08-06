@@ -15,14 +15,9 @@ export default function Rodape() {
         <div className={s.footerGrid}>
           <div className={s.footerColMarca}>
             <img
-              src="/brand/aonda-wordmark-dark-semfundo.png"
+              src="/brand/aonda-logo-completo-semfundo.png"
               alt="AONDA DIGITAL"
-              className={`${s.footerWordmark} ${s.footerWordmarkDark}`}
-            />
-            <img
-              src="/brand/aonda-wordmark-light.png"
-              alt="AONDA DIGITAL"
-              className={`${s.footerWordmark} ${s.footerWordmarkLight}`}
+              style={{ height: "76px", width: "auto", objectFit: "contain", marginLeft: "-6px" }}
             />
             <p className={s.footerFrase}>
               A tecnologia continua sendo nossa. A simplicidade passa a ser sua.
