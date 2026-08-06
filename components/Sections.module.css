@@ -583,7 +583,7 @@
   width: min(85vw, 960px);
   overflow: hidden;
   position: relative;
-  margin-top: 100px;
+  margin-top: 30px;
   padding-block: var(--space-6);
   mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
   -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
@@ -607,7 +607,7 @@
   align-items: center;
   justify-content: center;
   color: var(--text-secondary);
-  opacity: 0.5;
+  opacity: 0.3;
   transition: opacity var(--dur-fast) var(--ease), color var(--dur-fast) var(--ease), transform var(--dur-fast) var(--ease);
 }
 .iaItemCinza:hover {
