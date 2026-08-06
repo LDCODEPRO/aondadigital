@@ -119,6 +119,8 @@ export default function AtoProjetos() {
                     color: "var(--aonda-blue)",
                     fontWeight: 600,
                     textDecoration: "none",
+                    opacity: 0.5,
+                    transition: "opacity var(--dur-fast) var(--ease)",
                   }}
                 >
                   Conhecer projeto →
