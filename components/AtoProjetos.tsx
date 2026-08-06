@@ -82,7 +82,7 @@ export default function AtoProjetos() {
           </p>
         </Reveal>
 
-        <div className={`${s.grid} ${s.g6linha} ${s.gridQuadrado}`}>
+        <div className={`${s.grid} ${s.g3} ${s.gridQuadrado}`}>
           {projetos.map((p, i) => (
             <Reveal key={p.nome} delay={i * 70}>
               <article
@@ -112,9 +112,8 @@ export default function AtoProjetos() {
                   target="_blank"
                   rel="noopener noreferrer"
                   style={{
-                    marginTop: "auto",
-                    paddingTop: "var(--space-4)",
-                    minHeight: "44px",
+                    marginTop: "var(--space-4)",
+                    paddingTop: "var(--space-2)",
                     display: "inline-flex",
                     alignItems: "center",
                     color: "var(--aonda-blue)",
