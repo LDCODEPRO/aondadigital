@@ -960,6 +960,7 @@
   align-items: flex-end;
   gap: var(--space-3);
   margin-left: auto;
+  margin-right: -15px;
 }
 .footerSocialsTitle {
   font-size: var(--fs-caption);
