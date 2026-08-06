@@ -932,6 +932,13 @@
   z-index: 1;
 }
 .footerTop { display: flex; justify-content: center; text-align: center; gap: var(--space-12); flex-wrap: wrap; }
+.footerLogoImg {
+  height: 52px;
+  width: auto;
+  margin: 0 auto;
+  display: block;
+  object-fit: contain;
+}
 .footerFrase { color: var(--text-secondary); max-width: 34ch; margin-top: var(--space-4); margin-inline: auto; }
 .cadeia {
   display: flex; gap: var(--space-3); flex-wrap: wrap; align-items: center; justify-content: center;

@@ -14,7 +14,11 @@ export default function Rodape() {
       <div className="container">
         <div className={s.footerTop}>
           <div>
-            <AondaSymbol size={44} gradientId="footerWave" />
+            <img
+              src="/brand/aonda-rodape-logo.png"
+              alt="AONDA DIGITAL"
+              className={s.footerLogoImg}
+            />
             <p className={s.footerFrase}>
               A tecnologia continua sendo nossa. A simplicidade passa a ser sua.
             </p>
