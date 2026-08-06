@@ -55,7 +55,7 @@ const planos = [
     destaque: true,
   },
   {
-    nome: "Seja um Parceiro",
+    nome: "Construa, tenha uma renda recorrente",
     cor: "#7B5CFF",
     preco: "Consultor A Onda",
     tipoPreco: "consultor",
