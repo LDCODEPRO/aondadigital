@@ -145,8 +145,14 @@ export default function AtoEngenharia() {
         <Reveal>
           <div className={s.revelacao}>
             <div className={s.ondaLinha} />
-            <AondaSymbol size={80} gradientId="revelacaoWave" />
-            <p className={s.revelacaoTxt} style={{ marginTop: "var(--space-12)" }}>
+            <div className={s.simbolo3dContainer}>
+              <img
+                src="/brand/aonda-icone-glow.png"
+                alt="Símbolo AONDA 3D"
+                className={s.simbolo3dGrande}
+              />
+            </div>
+            <p className={s.revelacaoTxt} style={{ marginTop: "var(--space-8)" }}>
               Toda essa tecnologia. Agora ficou simples.
             </p>
             <p className="lead" style={{ marginInline: "auto", textAlign: "center" }}>

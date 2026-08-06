@@ -574,6 +574,23 @@
   opacity: 0.55;
   margin: 0 auto var(--space-16);
 }
+.simbolo3dContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-block: var(--space-4);
+}
+.simbolo3dGrande {
+  width: 170px;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 15px 30px rgba(0, 169, 222, 0.45));
+  transition: transform .3s ease;
+}
+.simbolo3dGrande:hover {
+  transform: scale(1.08) rotate(3deg);
+}
+
 .revelacaoTxt {
   font-size: var(--fs-h2);
   max-width: 20ch;
