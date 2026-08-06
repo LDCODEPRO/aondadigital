@@ -161,8 +161,6 @@ export default function AtoEngenharia() {
               </p>
             </div>
 
-            <div className={s.ondaLinha} />
-
             <div className={s.iaCarrosselWrapper}>
               <div className={s.iaCarrosselTrack}>
                 {[
