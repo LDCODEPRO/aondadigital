@@ -948,6 +948,16 @@
   }
 }
 .footerColMarca { display: flex; flex-direction: column; align-items: flex-start; }
+.footerWordmark {
+  display: block;
+  height: 52px;
+  width: auto;
+  object-fit: contain;
+  margin-left: -6px;
+}
+.footerWordmarkLight { display: none; }
+:global(html[data-theme="light"]) .footerWordmarkDark { display: none; }
+:global(html[data-theme="light"]) .footerWordmarkLight { display: block; }
 .footerFrase { color: var(--text-secondary); max-width: 34ch; margin-top: var(--space-4); line-height: 1.6; }
 .footerColTitulo {
   font-weight: var(--fw-bold);
