@@ -5,14 +5,14 @@
 .hero {
   position: relative;
   z-index: 1;
-  min-height: 100svh;
+  min-height: 80svh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding-block: var(--space-20);
-  padding-top: calc(var(--space-20) + 64px); /* espaco do header fixo */
+  padding-block: var(--space-10);
+  padding-top: 0;
 }
 
 /* Sequência do Ato 01: primeiro a marca, silêncio, depois a frase.
@@ -33,7 +33,7 @@
 }
 
 /* O anel herda currentColor. Tem que seguir o tema, senão some no escuro. */
-.symbol { margin-bottom: var(--space-8); }
+.symbol { margin-top: -120px; margin-bottom: var(--space-8); }
 
 .logo {
   display: block;
