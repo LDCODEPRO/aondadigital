@@ -60,17 +60,6 @@ export default function AtoDor() {
           ))}
         </div>
 
-        {/* Esteira de logos das marcas/cards */}
-        <div className={s.esteiraLogosCards} aria-hidden="true">
-          <div className={s.esteiraLogosTrilho}>
-            {dores.concat(dores).concat(dores).map((d, idx) => (
-              <div key={idx} className={s.esteiraLogoItem}>
-                <img src={d.imagem} alt="" />
-              </div>
-            ))}
-          </div>
-        </div>
-
         <p className={`${s.esteiraLegenda} ${s.center}`}>
           TRAZEMOS UM NOVO CONCEITO SOBRE O DIGITAL
         </p>
