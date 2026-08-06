@@ -72,6 +72,7 @@ const planos = [
       "Sem precisar contratar equipe",
       "Sem precisar entender de tecnologia",
       "Trabalhe de onde estiver",
+      "Faça parte deste ecossistema",
     ],
     ctaTexto: "Quero saber mais",
     ctaHref: "#contato",
