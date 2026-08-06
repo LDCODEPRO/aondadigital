@@ -583,14 +583,15 @@
   width: min(85vw, 960px);
   overflow: hidden;
   position: relative;
-  padding-block: var(--space-10);
+  margin-top: 40px;
+  padding-block: var(--space-6);
   mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
   -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
 }
 .iaCarrosselTrack {
   display: flex;
   align-items: center;
-  gap: var(--space-16);
+  gap: calc(var(--space-16) + 12px);
   width: max-content;
   animation: rolarIaInfinito 28s linear infinite;
 }
@@ -606,7 +607,7 @@
   align-items: center;
   justify-content: center;
   color: var(--text-secondary);
-  opacity: 0.6;
+  opacity: 0.5;
   transition: opacity var(--dur-fast) var(--ease), color var(--dur-fast) var(--ease), transform var(--dur-fast) var(--ease);
 }
 .iaItemCinza:hover {
@@ -615,8 +616,8 @@
   transform: scale(1.15);
 }
 .iaLogoSvg {
-  width: 57px;
-  height: 57px;
+  width: 86px;
+  height: 86px;
 }
 .ondaLinha {
   height: 3px;
