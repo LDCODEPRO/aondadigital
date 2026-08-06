@@ -580,7 +580,7 @@
   background: var(--wave-gradient);
   width: min(85vw, 960px);
   opacity: 0.55;
-  margin: var(--space-10) auto 0;
+  margin: var(--space-6) auto 0;
 }
 .simbolo3dContainer {
   display: flex;
