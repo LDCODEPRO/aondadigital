@@ -327,6 +327,7 @@ export default function AtoEngenharia() {
                 ]).map((ia, index) => (
                   <div key={index} className={s.iaItemCinza} title={ia.nome}>
                     {ia.svg}
+                    <span className={s.iaNomeTooltip}>{ia.nome}</span>
                   </div>
                 ))}
               </div>
