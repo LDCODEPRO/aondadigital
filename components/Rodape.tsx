@@ -217,7 +217,7 @@ export default function Rodape() {
         {/* ÁREA 3 — BARRA INFERIOR LEGAL */}
         <div className={s.footerBottomBar}>
           <div className={s.footerCopy}>
-            © {currentYear} A Onda Digital. Todos os direitos reservados.
+            © 2024 A Onda Digital. Todos os direitos reservados.
           </div>
           <div className={s.footerLegalLinks}>
             <a href="#contato" className={s.footerLegalLink}>
